@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { toastTypes } from '@saltswap/uikit'
+import { toastTypes } from '@gameswapfinance/uikit'
 import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit'
 import { kebabCase } from 'lodash'
 import { push } from 'state/toasts'

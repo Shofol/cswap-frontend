@@ -1,5 +1,5 @@
 import React from 'react'
-import { AutoRenewIcon, Flex, Heading } from '@saltswap/uikit'
+import { AutoRenewIcon, Flex, Heading } from '@gameswapfinance/uikit'
 import orderBy from 'lodash/orderBy'
 import { useTeams } from 'state/hooks'
 import Page from 'components/layout/Page'

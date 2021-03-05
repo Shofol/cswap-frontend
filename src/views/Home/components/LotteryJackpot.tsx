@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@saltswap/uikit'
+import { Text } from '@gameswapfinance/uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 import useI18n from 'hooks/useI18n'
@@ -19,7 +19,7 @@ const LotteryJackpot = () => {
   return (
     <>
       <Text bold fontSize="24px" style={{ lineHeight: '1.5' }}>
-        {lotteryPrizeAmoutCake} {TranslateString(999, 'SALT')}
+        {lotteryPrizeAmoutCake} {TranslateString(999, 'STONK')}
       </Text>
       <CardBusdValue value={lotteryPrizeAmountBusd} />
     </>

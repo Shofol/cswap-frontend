@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from '@saltswap/uikit'
+import { Heading, Text } from '@gameswapfinance/uikit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import HeaderWrapper from 'views/Profile/components/HeaderWrapper'

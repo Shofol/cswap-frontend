@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button, useModal } from '@saltswap/uikit'
+import { Heading, Card, CardBody, Button, useModal } from '@gameswapfinance/uikit'
 import { getCakeAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
@@ -71,7 +71,7 @@ const FarmedStakingCard = () => {
     if (!allowance.toNumber()) {
       return (
         <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
-          {TranslateString(494, 'Approve SALT')}
+          {TranslateString(494, 'Approve game')}
         </Button>
       )
     }
@@ -82,7 +82,7 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="SALT" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="game" />)
 
   return (
     <StyledLotteryCard>
@@ -90,9 +90,9 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(550, 'Your Lottery Winnings')}
         </Heading>
-        <CardImage src="/images/ticket.svg" alt="salt logo" width={64} height={64} />
+        <CardImage src="/images/ticket.svg" alt="game logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(552, 'SALT to Collect')}:</Label>
+          <Label>{TranslateString(552, 'game to Collect')}:</Label>
           <CakeWinnings />
         </Block>
         <Block>

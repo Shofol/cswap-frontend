@@ -1,7 +1,7 @@
 {
-  "short_name": "SaltSwap",
-  "name": "SaltSwap",
-  "description": "Farm SALT with SaltSwap LP Tokens",
+  "short_name": "GameSwap",
+  "name": "GameSwap",
+  "description": "Farm Stonks with GameSwap LP Tokens",
   "icons": [
     {
       "src": "favicon.ico",

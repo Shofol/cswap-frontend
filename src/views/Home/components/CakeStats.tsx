@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@saltswap/uikit'
+import { Card, CardBody, Heading, Text } from '@gameswapfinance/uikit'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
@@ -30,18 +30,18 @@ const CakeStats = () => {
     <StyledCakeStats>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(534, 'Salty Stats')}
+          {TranslateString(534, 'Stonk Stats')}
         </Heading>
         <Row>
-          <Text fontSize="14px">{TranslateString(536, 'Total SALT Supply')}</Text>
+          <Text fontSize="14px">{TranslateString(536, 'Total Stonks Supply')}</Text>
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(538, 'Total SALT Burned')}</Text>
+          <Text fontSize="14px">{TranslateString(538, 'Total Stonks Burned')}</Text>
           <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} />
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(540, 'New SALT/block')}</Text>
+          <Text fontSize="14px">{TranslateString(540, 'New stonk/block')}</Text>
           <CardValue fontSize="14px" decimals={0} value={25} />
         </Row>
       </CardBody>

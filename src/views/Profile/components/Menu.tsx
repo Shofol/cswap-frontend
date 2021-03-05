@@ -1,7 +1,7 @@
 import useI18n from 'hooks/useI18n'
 import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { ChevronLeftIcon, Flex, Text, ButtonMenu, ButtonMenuItem } from '@saltswap/uikit'
+import { ChevronLeftIcon, Flex, Text, ButtonMenu, ButtonMenuItem } from '@gameswapfinance/uikit'
 
 interface MenuProps {
   activeIndex?: number

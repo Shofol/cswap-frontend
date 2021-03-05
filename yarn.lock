@@ -1947,9 +1947,9 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@saltswap/eslint-config-salt@1.0.0":
+"@gameswapfinance/eslint-config-game@1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@saltswap/eslint-config-salt/-/eslint-config-salt-1.0.0.tgz#cc004c324f7c8a5ea1000b4e297f7014d00d7fe8"
+  resolved "https://registry.yarnpkg.com/@gameswapfinance/eslint-config-game/-/eslint-config-game-1.0.0.tgz#cc004c324f7c8a5ea1000b4e297f7014d00d7fe8"
   integrity sha512-OwrY2azm3ICCuulxBfG1QBGYyd4uxsWzU1imMVzjmWw9rNiVPX0Rb8WBlfNRkI/ZxEH37NWQ4aTgnrI4jOkd4Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.2.0"
@@ -1961,9 +1961,9 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@saltswap/uikit@^1.0.0":
+"@gameswapfinance/uikit@^1.0.0":
   version "1.2.21"
-  resolved "file:/Users/admin/Desktop/DApps/Salt/saltswap-uikit/saltswap-uikit-1.2.21.tgz#187072f863a73fc3ef4c3ed7c6bc0632164f46e8"
+  resolved "file:/Users/admin/Desktop/DApps/game/gameswap-uikit/gameswap-uikit-1.2.21.tgz#187072f863a73fc3ef4c3ed7c6bc0632164f46e8"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
@@ -2505,7 +2505,7 @@
 "@types/resolve@0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-0.0.8.tgz#f26074d238e02659e323ce1a13d041eee280e194"
-  integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
+  integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQgameKpsQ==
   dependencies:
     "@types/node" "*"
 

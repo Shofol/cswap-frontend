@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { BaseLayout } from '@saltswap/uikit'
+import { BaseLayout } from '@gameswapfinance/uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalClaim } from 'hooks/useTickets'
 import YourPrizesCard from './components/YourPrizesCard'

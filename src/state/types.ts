@@ -1,4 +1,4 @@
-import { Toast } from '@saltswap/uikit'
+import { Toast } from '@gameswapfinance/uikit'
 import BigNumber from 'bignumber.js'
 import { CampaignType, FarmConfig, Nft, PoolConfig, Team } from 'config/constants/types'
 

@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image } from '@saltswap/uikit'
+import { Button, IconButton, useModal, AddIcon, Image } from '@gameswapfinance/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -191,7 +191,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <StyledDetails>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label={stakingTokenName}>
-              🧂{' '}
+              {' '}
             </span>
             {TranslateString(384, 'Your Stake')}:
           </div>

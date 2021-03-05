@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, useModal } from '@saltswap/uikit'
+import { Button, useModal } from '@gameswapfinance/uikit'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
 import { useLotteryAllowance } from 'hooks/useAllowance'
@@ -42,7 +42,7 @@ const TicketCard: React.FC = () => {
             {TranslateString(432, 'View your tickets')}
           </Button>
           <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
-            {TranslateString(494, 'Approve SALT')}
+            {TranslateString(494, 'Approve STONK')}
           </Button>
         </>
       )

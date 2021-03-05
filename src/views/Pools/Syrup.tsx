@@ -3,7 +3,7 @@ import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import styled from 'styled-components'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { Heading } from '@saltswap/uikit'
+import { Heading } from '@gameswapfinance/uikit'
 import { BLOCKS_PER_YEAR } from 'config'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
@@ -81,15 +81,15 @@ const Farm: React.FC = () => {
       <Hero>
         <div>
           <Heading as="h1" size="xxl" mb="16px">
-            {TranslateString(738, 'Salty Pools')}
+            {TranslateString(738, 'gamey Pools')}
           </Heading>
           <ul>
-            <li>{TranslateString(580, 'Stake SALT to earn new tokens.')}</li>
+            <li>{TranslateString(580, 'Stake game to earn new tokens.')}</li>
             <li>{TranslateString(486, 'You can unstake at any time.')}</li>
             <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
           </ul>
         </div>
-        <img src="/images/salty-pool.png" alt="SYRUP POOL icon" width={410} height={191} />
+        <img src="/images/gamey-pool.png" alt="SYRUP POOL icon" width={410} height={191} />
       </Hero>
       <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} />
       <Divider />

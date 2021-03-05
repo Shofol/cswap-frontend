@@ -11,7 +11,7 @@
     "browser": true,
     "jest": true
   },
-  "extends": "@saltswap/eslint-config-salt",
+  "extends": "@gameswapfinance/eslint-config-game",
   "rules": {
     "no-console": ["warn", { "allow": ["info", "warn", "error"] }],
     "no-plusplus": 0,

@@ -1,4 +1,4 @@
-import { MenuEntry } from '@saltswap/uikit'
+import { MenuEntry } from '@gameswapfinance/uikit'
 
 const config: MenuEntry[] = [
   {
@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.saltswap.finance',
+        href: 'https://exchange.gameswap.finance',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.saltswap.finance/#/pool',
+        href: 'https://exchange.gameswap.finance/#/pool',
       },
     ],
   },
@@ -26,7 +26,7 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Salty Pools',
+    label: 'gamey Pools',
     icon: 'PoolIcon',
     href: '/pools',
   },
@@ -65,19 +65,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://saltswap.info',
+        href: 'https://gameswap.info',
       },
       {
         label: 'Tokens',
-        href: 'https://saltswap.info/tokens',
+        href: 'https://gameswap.info/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://saltswap.info/pairs',
+        href: 'https://gameswap.info/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://saltswap.info/accounts',
+        href: 'https://gameswap.info/accounts',
       },
     ],
   },
@@ -92,19 +92,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Voting',
-        href: 'https://voting.saltswap.finance',
+        href: 'https://voting.gameswap.finance',
       },
       {
         label: 'Github',
-        href: 'https://github.com/saltswap',
+        href: 'https://github.com/gameswap',
       },
       {
         label: 'Docs',
-        href: 'https://docs.saltswap.finance',
+        href: 'https://docs.gameswap.finance',
       },
       {
         label: 'Blog',
-        href: 'https://saltswap.medium.com',
+        href: 'https://gameswap.medium.com',
       },
     ],
   },

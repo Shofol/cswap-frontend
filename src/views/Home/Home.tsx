@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@saltswap/uikit'
+import { Heading, Text, BaseLayout } from '@gameswapfinance/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
@@ -25,7 +25,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/salt-stars-bg-2.svg'), url('/images/salt-stars-bg.svg');
+    background-image: url('/images/game-stars-bg-2.svg'), url('/images/game-stars-bg.svg');
     background-position: left center, right center;
     height: 165px;
     padding-top: 0;
@@ -83,9 +83,9 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'SaltSwap')}
+          {TranslateString(576, 'GameSwap')}
         </Heading>
-        <Text>{TranslateString(578, 'The saltiest AMM and yield farm on Binance Smart Chain.')}</Text>
+        <Text>{TranslateString(578, 'The gameiest AMM and yield farm on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>

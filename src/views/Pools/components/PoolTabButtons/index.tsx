@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem, Toggle, Text } from '@saltswap/uikit'
+import { ButtonMenu, ButtonMenuItem, Toggle, Text } from '@gameswapfinance/uikit'
 import useI18n from 'hooks/useI18n'
 
 const PoolTabButtons = ({ stackedOnly, setStackedOnly }) => {

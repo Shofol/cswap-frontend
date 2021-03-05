@@ -1,5 +1,5 @@
 import React from 'react'
-import { InjectedModalProps, Modal } from '@saltswap/uikit'
+import { InjectedModalProps, Modal } from '@gameswapfinance/uikit'
 import useI18n from 'hooks/useI18n'
 import useEditProfile, { Views } from './reducer'
 import StartView from './StartView'
@@ -13,7 +13,7 @@ const viewTitle = {
   [Views.START]: { id: 999, label: 'Edit Profile' },
   [Views.CHANGE]: { id: 999, label: 'Change Profile Pic' },
   [Views.REMOVE]: { id: 999, label: 'Remove Profile Pic' },
-  [Views.APPROVE]: { id: 999, label: 'Approve SALT' },
+  [Views.APPROVE]: { id: 999, label: 'Approve STONK' },
 }
 
 const EditProfileModal: React.FC<EditProfileModalProps> = ({ onDismiss }) => {
