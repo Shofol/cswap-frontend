@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useContext } from 'react'
 import styled from 'styled-components'
-import { Text } from '@gameswapfinance/uikit'
+import { Text } from '@pancakeswap-libs/uikit'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import Loading from '../Loading'
 
@@ -16,15 +16,23 @@ const InnerWrapper = styled.div`
 
 const HistoryChart: React.FC = () => {
   const { historyData, historyError } = useContext(PastLotteryDataContext)
-  const getDataArray = (kind) => historyData.map((dataPoint) => dataPoint[kind]).reverse()
+  const getDataArray = (kind) => {
+    return historyData
+      .map((dataPoint) => {
+        return dataPoint[kind]
+      })
+      .reverse()
+  }
 
-  const lineStyles = ({ color }) => ({
-    borderColor: color,
-    fill: false,
-    borderWidth: 2,
-    pointRadius: 0,
-    pointHitRadius: 10,
-  })
+  const lineStyles = ({ color }) => {
+    return {
+      borderColor: color,
+      fill: false,
+      borderWidth: 2,
+      pointRadius: 0,
+      pointHitRadius: 10,
+    }
+  }
 
   const chartData = {
     labels: getDataArray('lotteryNumber'),
@@ -44,20 +52,24 @@ const HistoryChart: React.FC = () => {
     ],
   }
 
-  const axesStyles = ({ color, lineHeight }) => ({
-    borderCapStyle: 'round',
-    gridLines: { display: false },
-    ticks: {
-      fontFamily: 'Kanit, sans-serif',
-      fontColor: color,
-      fontSize: 14,
-      lineHeight,
-      maxRotation: 0,
-      beginAtZero: true,
-      autoSkipPadding: 15,
-      userCallback: (value) => value.toLocaleString(),
-    },
-  })
+  const axesStyles = ({ color, lineHeight }) => {
+    return {
+      borderCapStyle: 'round',
+      gridLines: { display: false },
+      ticks: {
+        fontFamily: 'Kanit, sans-serif',
+        fontColor: color,
+        fontSize: 14,
+        lineHeight,
+        maxRotation: 0,
+        beginAtZero: true,
+        autoSkipPadding: 15,
+        userCallback: (value) => {
+          return value.toLocaleString()
+        },
+      },
+    }
+  }
 
   const options = {
     legend: { display: false },

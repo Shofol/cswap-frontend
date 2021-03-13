@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '@gameswapfinance/uikit'
+import { Card } from '@pancakeswap-libs/uikit'
 import { DataResponse } from 'utils/getLotteryRoundData'
 import PastRoundCardError from './PastRoundCardError'
 import PastRoundCardDetails from './PastRoundCardDetails'
@@ -11,8 +11,8 @@ interface PastRoundCardProps {
   data: DataResponse
 }
 
-const PastRoundCard: React.FC<PastRoundCardProps> = ({ error, data }) => (
-  <Card>{error.message ? <PastRoundCardError error={error} /> : <PastRoundCardDetails data={data} />}</Card>
-)
+const PastRoundCard: React.FC<PastRoundCardProps> = ({ error, data }) => {
+  return <Card>{error.message ? <PastRoundCardError error={error} /> : <PastRoundCardDetails data={data} />}</Card>
+}
 
 export default PastRoundCard

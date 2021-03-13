@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text } from '@gameswapfinance/uikit'
+import { Text } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 export interface IfoCardDescriptionProps {
@@ -48,7 +48,7 @@ const IfoCardDescription: React.FC<IfoCardDescriptionProps> = ({ defaultIsOpen =
     <StyledIfoCardDescription>
       <Divider />
       <ToggleButton onClick={handleClick}>
-        {isOpen ? TranslateString(1066, 'Hide') : TranslateString(1064, 'Show')}
+        {isOpen ? TranslateString(999, 'Hide') : TranslateString(999, 'Show')}
       </ToggleButton>
       <Description isOpen={isOpen}>{description}</Description>
     </StyledIfoCardDescription>

@@ -1,4 +1,4 @@
-import { MenuEntry } from '@gameswapfinance/uikit'
+import { MenuEntry } from '@pancakeswap-libs/uikit'
 
 const config: MenuEntry[] = [
   {
@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.gameswap.finance',
+        href: 'https://exchange.goosedefi.com/',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.gameswap.finance/#/pool',
+        href: 'https://exchange.goosedefi.com/#/pool',
       },
     ],
   },
@@ -26,10 +26,15 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'gamey Pools',
+    label: 'Pools',
     icon: 'PoolIcon',
-    href: '/pools',
+    href: '/nests',
   },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: '/pools',
+  // },
   // {
   //   label: 'Lottery',
   //   icon: 'TicketIcon',
@@ -40,73 +45,60 @@ const config: MenuEntry[] = [
   //   icon: 'NftIcon',
   //   href: '/nft',
   // },
-  // {
-  //   label: 'Teams & Profile',
-  //   icon: 'GroupsIcon',
-  //   calloutClass: 'rainbow',
-  //   items: [
-  //     {
-  //       label: 'Leaderboard',
-  //       href: '/teams',
-  //     },
-  //     {
-  //       label: 'Task Center',
-  //       href: '/profile/tasks',
-  //     },
-  //     {
-  //       label: 'Your Profile',
-  //       href: '/profile',
-  //     },
-  //   ],
-  // },
   {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'Overview',
-        href: 'https://gameswap.info',
+        label: 'PancakeSwap',
+        href: 'https://pancakeswap.info/token/0xfaD0ac6bfF4ad39d28d4aa2eCDEe954D168bD418',
       },
       {
-        label: 'Tokens',
-        href: 'https://gameswap.info/tokens',
+        label: 'CoinGecko',
+        href: 'https://www.coingecko.com/en/coins/goose-finance',
       },
       {
-        label: 'Pairs',
-        href: 'https://gameswap.info/pairs',
+        label: 'CoinMarketCap',
+        href: 'https://coinmarketcap.com/currencies/goose-finance/',
       },
       {
-        label: 'Accounts',
-        href: 'https://gameswap.info/accounts',
+        label: 'AstroTools',
+        href: 'https://app.astrotools.io/pancake-pair-explorer/0x03e90acD177CCE802D69611d10ca91Df13A8a9d4',
       },
     ],
   },
-  // {
-  //   label: 'IFO',
-  //   icon: 'IfoIcon',
-  //   href: '/ifo',
-  // },
   {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Voting',
-        href: 'https://voting.gameswap.finance',
-      },
-      {
         label: 'Github',
-        href: 'https://github.com/gameswap',
+        href: 'https://github.com/goosedefi/',
       },
       {
         label: 'Docs',
-        href: 'https://docs.gameswap.finance',
+        href: 'https://goosedefi.gitbook.io/goose-finance/',
       },
       {
         label: 'Blog',
-        href: 'https://gameswap.medium.com',
+        href: 'https://goosefinance.medium.com/',
       },
     ],
+  },
+  {
+    label: 'Open Positions',
+    icon: 'GooseIcon',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSe7ycrw8Dq4C5Vjc9WNlRtTxEhFDB1Ny6jlAByZ2Y6qBo7SKg/viewform?usp=sf_link',
+  },
+  {
+    label: 'Audit by Deloitte',
+    icon: 'AuditIcon',
+    href: 'https://www.goosedefi.com/files/hackenAudit.pdf',
+  },
+  {
+    label: 'Audit by EY',
+    icon: 'AuditIcon',
+    href: 'https://certik.org/projects/goose-finance',
   },
 ]
 

@@ -24,7 +24,9 @@ export const useAllHarvest = (farmPids: number[]) => {
   const masterChefContract = useMasterchef()
 
   const handleHarvest = useCallback(async () => {
-    const harvestPromises = farmPids.reduce((accum, pid) => [...accum, harvest(masterChefContract, pid, account)], [])
+    const harvestPromises = farmPids.reduce((accum, pid) => {
+      return [...accum, harvest(masterChefContract, pid, account)]
+    }, [])
 
     return Promise.all(harvestPromises)
   }, [account, farmPids, masterChefContract])

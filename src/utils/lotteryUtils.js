@@ -5,7 +5,6 @@ import { getWeb3 } from 'utils/web3'
 import MultiCallAbi from 'config/abi/Multicall.json'
 import ticketAbi from 'config/abi/lotteryNft.json'
 import lotteryAbi from 'config/abi/lottery.json'
-import { LOTTERY_TICKET_PRICE } from 'config'
 import { getMulticallAddress } from './addressHelpers'
 
 export const multiCall = async (abi, calls) => {
@@ -35,14 +34,16 @@ export const multiBuy = async (lotteryContract, price, numbersList, account) => 
     return lotteryContract.methods
       .multiBuy(new BigNumber(price).times(new BigNumber(10).pow(18)).toString(), numbersList)
       .send({ from: account })
-      .on('transactionHash', (tx) => tx.transactionHash)
+      .on('transactionHash', (tx) => {
+        return tx.transactionHash
+      })
   } catch (err) {
     return console.error(err)
   }
 }
 
 export const getTickets = async (lotteryContract, ticketsContract, account, customLotteryNum) => {
-  const issueIndex = customLotteryNum || (await lotteryContract.methods.issueIndex().call())
+  const issueIdex = customLotteryNum || (await lotteryContract.methods.issueIndex().call())
   const length = await getTicketsAmount(ticketsContract, account)
 
   // eslint-disable-next-line prefer-spread
@@ -60,7 +61,7 @@ export const getTickets = async (lotteryContract, ticketsContract, account, cust
 
   const finalTokenids = []
   ticketIssues.forEach(async (ticketIssue, i) => {
-    if (new BigNumber(ticketIssue).eq(issueIndex)) {
+    if (ticketIssue.toString() === issueIdex) {
       finalTokenids.push(tokenIds[i])
     }
   })
@@ -71,7 +72,9 @@ export const getTickets = async (lotteryContract, ticketsContract, account, cust
   return tickets
 }
 
-export const getTicketsAmount = async (ticketsContract, account) => ticketsContract.methods.balanceOf(account).call()
+export const getTicketsAmount = async (ticketsContract, account) => {
+  return ticketsContract.methods.balanceOf(account).call()
+}
 
 export const multiClaim = async (lotteryContract, ticketsContract, account) => {
   await lotteryContract.methods.issueIndex().call()
@@ -108,7 +111,9 @@ export const multiClaim = async (lotteryContract, ticketsContract, account) => {
     return lotteryContract.methods
       .multiClaim(finanltokenIds)
       .send({ from: account })
-      .on('transactionHash', (tx) => tx.transactionHash)
+      .on('transactionHash', (tx) => {
+        return tx.transactionHash
+      })
   } catch (err) {
     return console.error(err)
   }
@@ -116,7 +121,7 @@ export const multiClaim = async (lotteryContract, ticketsContract, account) => {
 
 export const getTotalClaim = async (lotteryContract, ticketsContract, account) => {
   try {
-    const issueIndex = await lotteryContract.methods.issueIndex().call()
+    const issueIdex = await lotteryContract.methods.issueIndex().call()
     const length = await getTicketsAmount(ticketsContract, account)
     // eslint-disable-next-line prefer-spread
     const calls1 = Array.apply(null, { length }).map((a, i) => [
@@ -136,7 +141,7 @@ export const getTotalClaim = async (lotteryContract, ticketsContract, account) =
     const finalTokenids = []
     ticketIssues.forEach(async (ticketIssue, i) => {
       // eslint-disable-next-line no-empty
-      if (!drawed && ticketIssue.toString() === issueIndex) {
+      if (!drawed && ticketIssue.toString() === issueIdex) {
       } else if (!claimedStatus[i][0]) {
         finalTokenids.push(tokenIds[i])
       }
@@ -155,28 +160,32 @@ export const getTotalClaim = async (lotteryContract, ticketsContract, account) =
 }
 
 export const getTotalRewards = async (lotteryContract) => {
-  const issueIndex = await lotteryContract.methods.issueIndex().call()
-  return lotteryContract.methods.getTotalRewards(issueIndex).call()
+  const issueIdex = await lotteryContract.methods.issueIndex().call()
+  return lotteryContract.methods.getTotalRewards(issueIdex).call()
 }
 
-export const getMax = async (lotteryContract) => lotteryContract.methods.maxNumber().call()
+export const getMax = async (lotteryContract) => {
+  return lotteryContract.methods.maxNumber().call()
+}
 
 export const getLotteryIssueIndex = async (lotteryContract) => {
   const issueIndex = await lotteryContract.methods.issueIndex().call()
   return issueIndex
 }
 
-export const getLotteryStatus = async (lotteryContract) => lotteryContract.methods.drawed().call()
+export const getLotteryStatus = async (lotteryContract) => {
+  return lotteryContract.methods.drawed().call()
+}
 
 export const getMatchingRewardLength = async (lotteryContract, matchNumber) => {
-  let issueIndex = await lotteryContract.methods.issueIndex().call()
+  let issueIdex = await lotteryContract.methods.issueIndex().call()
   const drawed = await lotteryContract.methods.drawed().call()
   if (!drawed) {
-    issueIndex -= 1
+    issueIdex -= 1
   }
   try {
-    const amount = await lotteryContract.methods.historyAmount(issueIndex, 5 - matchNumber).call()
-    return amount / 1e18 / LOTTERY_TICKET_PRICE
+    const amount = await lotteryContract.methods.historyAmount(issueIdex, 5 - matchNumber).call()
+    return amount / 1e18 / 10
   } catch (err) {
     console.error(err)
   }
@@ -184,16 +193,16 @@ export const getMatchingRewardLength = async (lotteryContract, matchNumber) => {
 }
 
 export const getWinningNumbers = async (lotteryContract) => {
-  const issueIndex = await lotteryContract.methods.issueIndex().call()
+  const issueIdex = await lotteryContract.methods.issueIndex().call()
   const numbers = []
   const drawed = await lotteryContract.methods.drawed().call()
 
-  if (!drawed && parseInt(issueIndex, 10) === 0) {
+  if (!drawed && parseInt(issueIdex, 10) === 0) {
     return [0, 0, 0, 0]
   }
   if (!drawed) {
     for (let i = 0; i < 4; i++) {
-      numbers.push(+(await lotteryContract.methods.historyNumbers(issueIndex - 1, i).call()).toString())
+      numbers.push(+(await lotteryContract.methods.historyNumbers(issueIdex - 1, i).call()).toString())
     }
   } else {
     for (let i = 0; i < 4; i++) {

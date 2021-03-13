@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, Link, Image } from '@gameswapfinance/uikit'
+import { Text, Heading, Link, Image } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 const LayoutWrapper = styled.div`
@@ -30,7 +30,7 @@ const HowItWorks = () => {
     <LayoutWrapper>
       <StyledImage src="/images/pancake-lottery-bunny.png" alt="lottery bunny" width={163} height={140} />
       <StyledHeading size="lg" as="h3" color="secondary">
-        {TranslateString(632, 'How it works')}
+        {TranslateString(999, 'How it works')}
       </StyledHeading>
       <Text fontSize="16px">
         {TranslateString(

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, LinkExternal, useModal } from '@gameswapfinance/uikit'
+import { Button, LinkExternal, useModal } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTickets from 'hooks/useTickets'
@@ -47,11 +47,11 @@ const TicketCard: React.FC<{ contractLink?: string; lotteryNumber?: number }> = 
     <Wrapper>
       <div>
         <Button disabled={ticketsLength === 0} onClick={onPresentMyTickets} fullWidth>
-          {TranslateString(432, 'View your tickets')}
+          {TranslateString(999, 'View your tickets')}
         </Button>
       </div>
       <div>
-        <ExternalLinkWrap href={contractLink}>{TranslateString(356, 'View on BscScan')}</ExternalLinkWrap>
+        <ExternalLinkWrap href={contractLink}>{TranslateString(999, 'View on BscScan')}</ExternalLinkWrap>
       </div>
     </Wrapper>
   )

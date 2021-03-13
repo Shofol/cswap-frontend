@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Spinner } from '@gameswapfinance/uikit'
+import { Spinner } from '@pancakeswap-libs/uikit'
 import Page from './layout/Page'
 
 const Wrapper = styled(Page)`
@@ -9,10 +9,12 @@ const Wrapper = styled(Page)`
   align-items: center;
 `
 
-const PageLoader: React.FC = () => (
-  <Wrapper>
-    <Spinner />
-  </Wrapper>
-)
+const PageLoader: React.FC = () => {
+  return (
+    <Wrapper>
+      <Spinner />
+    </Wrapper>
+  )
+}
 
 export default PageLoader

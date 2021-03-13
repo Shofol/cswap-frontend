@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Text, Input, Button } from '@gameswapfinance/uikit'
+import { Text, Input, Button } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 
 interface PastLotterySearcherProps {
@@ -45,7 +45,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
 
   return (
     <Wrapper>
-      <Text>{TranslateString(742, 'Select lottery number:')}</Text>
+      <Text>{TranslateString(999, 'Select lottery number:')}</Text>
       <form onSubmit={handleSubmit}>
         <SearchWrapper>
           <Input
@@ -57,7 +57,7 @@ const PastLotterySearcher: React.FC<PastLotterySearcherProps> = ({ initialLotter
           />
           <ButtonWrapper>
             <Button type="submit" size="sm" disabled={isError}>
-              {TranslateString(744, 'Search')}
+              {TranslateString(999, 'Search')}
             </Button>
           </ButtonWrapper>
         </SearchWrapper>

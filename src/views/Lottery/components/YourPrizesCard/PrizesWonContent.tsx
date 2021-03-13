@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, Heading, Won, useModal } from '@gameswapfinance/uikit'
+import { Button, Heading, Won, useModal } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useMultiClaimLottery } from 'hooks/useBuyLottery'
@@ -67,7 +67,7 @@ const PrizesWonContent: React.FC = () => {
         <Won />
       </IconWrapper>
       <Heading as="h3" size="lg" color="secondary">
-        {TranslateString(660, 'You won!')}
+        {TranslateString(999, 'You won!')}
       </Heading>
       {claimLoading && <Loading />}
       {!claimLoading && (
@@ -84,7 +84,7 @@ const PrizesWonContent: React.FC = () => {
       )}
       <StyledCardActions>
         <Button fullWidth disabled={requestedClaim} onClick={handleClaim}>
-          {TranslateString(1056, 'Collect')}
+          {TranslateString(999, 'Collect')}
         </Button>
       </StyledCardActions>
       <StyledButton variant="text" onClick={onPresentMyTickets}>

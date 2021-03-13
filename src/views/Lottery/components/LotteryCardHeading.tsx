@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading, Text } from '@gameswapfinance/uikit'
+import { Flex, Heading, Text } from '@pancakeswap-libs/uikit'
 
 interface HeadingProps {
   valueToDisplay?: string
@@ -16,21 +16,23 @@ const IconWrapper = styled.div`
   }
 `
 
-const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, Icon, ...props }) => (
-  <Flex {...props}>
-    {Icon && (
-      <IconWrapper>
-        <Icon />
-      </IconWrapper>
-    )}
-    <Flex flexDirection="column">
-      <Text fontSize="14px" color="textSubtle">
-        {children}
-      </Text>
-      <Heading size="lg">{valueToDisplay}</Heading>
+const LotteryCardHeading: React.FC<HeadingProps> = ({ valueToDisplay, children, Icon, ...props }) => {
+  return (
+    <Flex {...props}>
+      {Icon && (
+        <IconWrapper>
+          <Icon />
+        </IconWrapper>
+      )}
+      <Flex flexDirection="column">
+        <Text fontSize="14px" color="textSubtle">
+          {children}
+        </Text>
+        <Heading size="lg">{valueToDisplay}</Heading>
+      </Flex>
     </Flex>
-  </Flex>
-)
+  )
+}
 
 LotteryCardHeading.defaultProps = {
   valueToDisplay: '',

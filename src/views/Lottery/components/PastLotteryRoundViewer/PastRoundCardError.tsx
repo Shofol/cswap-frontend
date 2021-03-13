@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@gameswapfinance/uikit'
+import { Text } from '@pancakeswap-libs/uikit'
 
 interface PastRoundCardErrorProps {
   error: {
@@ -7,6 +7,8 @@ interface PastRoundCardErrorProps {
   }
 }
 
-const PastRoundCardError: React.FC<PastRoundCardErrorProps> = ({ error }) => <Text p="24px">{error.message}</Text>
+const PastRoundCardError: React.FC<PastRoundCardErrorProps> = ({ error }) => {
+  return <Text p="24px">{error.message}</Text>
+}
 
 export default PastRoundCardError

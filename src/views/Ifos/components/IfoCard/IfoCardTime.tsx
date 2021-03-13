@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, Text } from '@gameswapfinance/uikit'
+import { Link, Text } from '@pancakeswap-libs/uikit'
 import { IfoStatus } from 'config/constants/types'
 import getTimePeriods from 'utils/getTimePeriods'
 import useI18n from 'hooks/useI18n'
@@ -41,7 +41,7 @@ const IfoCardTime: React.FC<IfoCardTimeProps> = ({ isLoading, status, secondsUnt
   if (countdownToUse <= 0) {
     return (
       <Details>
-        <Text bold>{TranslateString(388, 'Finished!')}</Text>
+        <Text bold>{TranslateString(999, 'Finished!')}</Text>
       </Details>
     )
   }

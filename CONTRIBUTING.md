@@ -1,8 +1,7 @@
-# Contributing to the GameSwap ecosystem 
+# Contributing to the Pancake ecosystem 🥞
 
-Thank you for taking the time to contribute!
-
-You can start by reading our [Contribution guidelines](https://docs.gameswap.finance/code/contributing) first.
+Thanks for taking the time to contribute !
+You can start by reading our [Contribution guidelines](https://docs.pancakeswap.finance/code/contributing) first.
 
 ## Setup
 
@@ -24,7 +23,7 @@ yarn start
 
 Don't forget to setup your IDE with `eslint` and `prettier`.
 
-## Project structure
+## Projet structure
 
 - **components** contains generic components used inside the application.
 - **views** contains building blocks for each page. The entry point of a view is used as the root component of each route.
@@ -48,22 +47,19 @@ A hook expose the function you need to translate content.
 
 ```
 import useI18n from 'hooks/useI18n'
-
 ...
 const TranslateString = useI18n()
 ...
-
-TranslateString(id, 'fallback', data)
+TranslateString(id, 'fallback')
 ```
 
 - **id** is the crowdin id of the string you want to translate.
 - **fallback** is a string fallback used if the id cannot be found.
-- **data** dynamic variables
 
-#### Dynamic variables Example
+### Variables
 
-If a Crowdin translation like this `You have %num% left in your wallet` - would look something like:
+The translation component can handle variables being passed in from Crowdin, with no code changes.
 
-```
-TranslateString(675, `You have ${gameBalance} left in your wallet`, { num: gameBalance })
-```
+It will only work if there is only **one** variable passed in, and if that variable within Crowdin is wrapped in **%** signs, i.e.:
+
+Translation in crowdin: `%asset% Earned` [link](https://crowdin.com/translate/pancakeswap/8/en-de#330)

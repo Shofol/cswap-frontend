@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BaseLayout } from '@gameswapfinance/uikit'
+import { BaseLayout } from '@pancakeswap-libs/uikit'
 import PastLotteryRoundViewer from './components/PastLotteryRoundViewer'
 import PastDrawsHistoryCard from './components/PastDrawsHistory/PastDrawsHistoryCard'
 
@@ -36,16 +36,18 @@ const BunnyImageWrapper = styled.div`
   justify-content: center;
 `
 
-const PastDrawsPage: React.FC = () => (
-  <Cards>
-    <PastLotteryRoundViewer />
-    <SecondCardColumnWrapper>
-      <PastDrawsHistoryCard />
-      <BunnyImageWrapper>
-        <img src="/images/pancake-lottery-bunny.png" alt="lottery bunny" />
-      </BunnyImageWrapper>
-    </SecondCardColumnWrapper>
-  </Cards>
-)
+const PastDrawsPage: React.FC = () => {
+  return (
+    <Cards>
+      <PastLotteryRoundViewer />
+      <SecondCardColumnWrapper>
+        <PastDrawsHistoryCard />
+        <BunnyImageWrapper>
+          <img src="/images/pancake-lottery-bunny.png" alt="lottery bunny" />
+        </BunnyImageWrapper>
+      </SecondCardColumnWrapper>
+    </Cards>
+  )
+}
 
 export default PastDrawsPage

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, Text } from '@gameswapfinance/uikit'
+import { ChevronDownIcon, Text } from '@pancakeswap-libs/uikit'
 
 export interface DetailsButtonProps {
   onClick?: () => void
@@ -20,13 +20,15 @@ const Wrapper = styled.div`
   }
 `
 
-const DetailsButton: React.FC<DetailsButtonProps> = ({ onClick }) => (
-  <Wrapper onClick={() => onClick()}>
-    <Text color="primary" bold>
-      Details
-    </Text>
-    <ChevronDownIcon />
-  </Wrapper>
-)
+const DetailsButton: React.FC<DetailsButtonProps> = ({ onClick }) => {
+  return (
+    <Wrapper onClick={() => onClick()}>
+      <Text color="primary" bold>
+        Details
+      </Text>
+      <ChevronDownIcon />
+    </Wrapper>
+  )
+}
 
 export default DetailsButton

@@ -5,9 +5,11 @@ import sousChefABI from 'config/abi/sousChef.json'
 import erc20ABI from 'config/abi/erc20.json'
 import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
-import { getAddress, getMasterChefAddress } from 'utils/addressHelpers'
+import { getMasterChefAddress } from 'utils/addressHelpers'
 import { getWeb3 } from 'utils/web3'
 import BigNumber from 'bignumber.js'
+
+const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
@@ -21,7 +23,7 @@ export const fetchPoolsAllowance = async (account) => {
   const calls = nonBnbPools.map((p) => ({
     address: p.stakingTokenAddress,
     name: 'allowance',
-    params: [account, getAddress(p.contractAddress)],
+    params: [account, p.contractAddress[CHAIN_ID]],
   }))
 
   const allowances = await multicall(erc20ABI, calls)
@@ -56,7 +58,7 @@ export const fetchUserBalances = async (account) => {
 
 export const fetchUserStakeBalances = async (account) => {
   const calls = nonMasterPools.map((p) => ({
-    address: getAddress(p.contractAddress),
+    address: p.contractAddress[CHAIN_ID],
     name: 'userInfo',
     params: [account],
   }))
@@ -77,7 +79,7 @@ export const fetchUserStakeBalances = async (account) => {
 
 export const fetchUserPendingRewards = async (account) => {
   const calls = nonMasterPools.map((p) => ({
-    address: getAddress(p.contractAddress),
+    address: p.contractAddress[CHAIN_ID],
     name: 'pendingReward',
     params: [account],
   }))
@@ -91,7 +93,7 @@ export const fetchUserPendingRewards = async (account) => {
   )
 
   // Cake / Cake pool
-  const pendingReward = await masterChefContract.methods.pendingCake('0', account).call()
+  const pendingReward = await masterChefContract.methods.pendingEgg('0', account).call()
 
   return { ...pendingRewards, 0: new BigNumber(pendingReward).toJSON() }
 }
