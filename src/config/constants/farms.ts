@@ -35,6 +35,23 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   // TODO add more farms
+  {
+    pid: 2,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'STONK',
+    lpAddresses: {
+      97: '',
+      56: '0x03e90acD177CCE802D69611d10ca91Df13A8a9d4', // STONK-BUSD LP
+    },
+    tokenSymbol: 'EGG',
+    tokenAddresses: {
+      97: '',
+      56: '0xfaD0ac6bfF4ad39d28d4aa2eCDEe954D168bD418',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
 ]
 
 export default farms
