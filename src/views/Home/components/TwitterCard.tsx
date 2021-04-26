@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Heading, Text } from '@gameswapfinance/uikit'
 import BigNumber from 'bignumber.js/bignumber'
 import styled from 'styled-components'
 import { Timeline } from 'react-twitter-widgets'
@@ -35,12 +35,12 @@ const TwitterCard = () => {
         <Timeline
           dataSource={{
             sourceType: 'profile',
-            screenName: 'elonmusk'
+            screenName: 'elonmusk',
           }}
           options={{
             height: '300',
-            chrome: "noheader, nofooter",
-            width: "400"
+            chrome: 'noheader, nofooter',
+            width: '400',
           }}
         />
       </CardBody>

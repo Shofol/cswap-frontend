@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@pancakeswap-libs/uikit'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@gameswapfinance/uikit'
 
 const NoFeeTag = () => (
   <Tag variant="success" outline startIcon={<VerifiedIcon />}>
@@ -14,19 +14,19 @@ const RiskTag = ({ risk }) => (
 )
 
 const CoreTag = () => (
-  <Tag variant='secondary' outline startIcon={<VerifiedIcon />}>
+  <Tag variant="secondary" outline startIcon={<VerifiedIcon />}>
     Core
   </Tag>
 )
 
 const CommunityTag = () => (
-  <Tag variant='textSubtle' outline startIcon={<CommunityIcon />}>
+  <Tag variant="textSubtle" outline startIcon={<CommunityIcon />}>
     Community
   </Tag>
 )
 
 const BinanceTag = () => (
-  <Tag variant='binance' outline startIcon={<BinanceIcon />}>
+  <Tag variant="binance" outline startIcon={<BinanceIcon />}>
     Binance
   </Tag>
 )

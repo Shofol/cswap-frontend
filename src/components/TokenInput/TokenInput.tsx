@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js/bignumber'
-import { Button } from '@pancakeswap-libs/uikit'
+import { Button } from '@gameswapfinance/uikit'
 import useI18n from '../../hooks/useI18n'
 import Input, { InputProps } from '../Input'
 
@@ -35,15 +35,12 @@ const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelect
         placeholder="0"
         value={value}
       />
-      {
-        depositFeeBP > 0 ?
-          <StyledMaxText>
-            {TranslateString(10001, 'Deposit Fee')}: {new BigNumber(value || 0).times(depositFeeBP/10000).toString()} {symbol}
-          </StyledMaxText>
-          :
-          null
-      }
-
+      {depositFeeBP > 0 ? (
+        <StyledMaxText>
+          {TranslateString(10001, 'Deposit Fee')}: {new BigNumber(value || 0).times(depositFeeBP / 10000).toString()}{' '}
+          {symbol}
+        </StyledMaxText>
+      ) : null}
     </StyledTokenInput>
   )
 }
