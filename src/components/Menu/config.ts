@@ -36,7 +36,7 @@ const config: MenuEntry[] = [
   //   href: '/pools',
   // },
   {
-    label: 'Profit Sharing',
+    label: 'Dividends',
     icon: 'TicketIcon',
     href: '/profit',
   },
@@ -55,7 +55,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Docs',
-        href: 'https://goosedefi.gitbook.io/goose-finance/',
+        href: 'https://gameswapfinance.gitbook.io/gameswap/',
       },
     ],
   },
