@@ -44,7 +44,7 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x03e90acD177CCE802D69611d10ca91Df13A8a9d4', // STONK-BUSD LP
     },
-    tokenSymbol: 'EGG',
+    tokenSymbol: 'STONK',
     tokenAddresses: {
       97: '',
       56: '0xfaD0ac6bfF4ad39d28d4aa2eCDEe954D168bD418',
