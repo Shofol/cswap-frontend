@@ -38,27 +38,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  /* {
-    pid: 0,
-    risk: 5,
-    isTokenOnly: false,
-    lpSymbol: 'KRILL - USDC',
-    lpAddresses: {
-      97: '',
-      56: '0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      137: '0x6405ebc22cb0899fc21f414085ac4044b4721a0d',
-    },
-    tokenSymbol: 'KRILL',
-    tokenAddresses: {
-      97: '',
-      56: '0xf952fc3ca7325cc27d15885d37117676d25bfda6',
-      137: '0x05089C9EBFFa4F0AcA269e32056b1b36B37ED71b',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
+  
   {
-    pid: 1,
+    pid: 2,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'WMATIC',
@@ -76,8 +58,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+ 
   {
-    pid: 2,
+    pid: 3,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'WBTC',
@@ -95,8 +78,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+
   {
-    pid: 3,
+    pid: 4,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'WETH',
@@ -114,8 +98,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  
   {
-    pid: 4,
+    pid: 5,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'QUICK',
@@ -133,8 +118,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+
   {
-    pid: 5,
+    pid: 6,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'YLD',
@@ -152,8 +138,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
+
   {
-    pid: 6,
+    pid: 7,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'USDT',
@@ -171,8 +158,9 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+         
   {
-    pid: 7,
+    pid: 8,
     isTokenOnly: true,
     risk: 3,
     lpSymbol: 'USDC',
@@ -190,6 +178,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  /* 
   {
     pid: 8,
     risk: 3,
