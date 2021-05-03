@@ -53,8 +53,8 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
-        <Heading as="h1" size="xxl" mb="16px">
-            Farming goes live at block 14080000!
+        <Heading as="h1" size="xl" mb="16px">
+            Farming goes live at block 14080000! Aproximately May 4th @ 13:00 UTC.
           </Heading>
       </Hero>
       <div>

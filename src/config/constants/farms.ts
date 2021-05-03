@@ -114,6 +114,24 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.wbnb,
   },
   {
+    pid: 12,
+    risk: 3,
+    lpSymbol: 'Quick-WMATIC',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x019ba0325f1988213d448b3472fa1cf8d07618d7', // Quick- WMatic
+    },
+    tokenSymbol: 'Quick',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x831753dd7087cac61ab5644b308642cc1c33dc13', // Quick
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
+  {
     pid: 3,
     isTokenOnly: true,
     risk: 3,
