@@ -22,6 +22,25 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
   },
   {
+    pid: 9,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'STONK',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x7191EEfC86D3E83abF72f2c120A3A638971502d1', // STONK - USDC
+    },
+    tokenSymbol: 'STONK',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
     pid: 1,
     risk: 3,
     lpSymbol: 'WMATIC-USDC',
@@ -35,6 +54,42 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
       137: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // WMATIC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 10,
+    risk: 3,
+    lpSymbol: 'USDT-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x2cF7252e74036d1Da831d11089D326296e64a728', // USDT- USDC
+    },
+    tokenSymbol: 'USDT',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', // USDT
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  {
+    pid: 11,
+    risk: 3,
+    lpSymbol: 'WBTC-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xf6a637525402643b0654a54bead2cb9a83c8b498', // WBTC USDC
+    },
+    tokenSymbol: 'WBTC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6', // WBTC
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -57,25 +112,6 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
-  },/*
-  {
-    pid: 9,
-    risk: 5,
-    isTokenOnly: true,
-    lpSymbol: 'STONK',
-    lpAddresses: {
-      97: '',
-      56: '',
-      137: '0x7191EEfC86D3E83abF72f2c120A3A638971502d1', // STONK - USDC
-    },
-    tokenSymbol: 'STONK',
-    tokenAddresses: {
-      97: '',
-      56: '',
-      137: '0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
   },
   {
     pid: 3,
@@ -195,7 +231,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  */
+  
 ]
 
 export default farms
