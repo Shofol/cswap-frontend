@@ -1,3 +1,4 @@
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript'
 import BigNumber from 'bignumber.js'
 import { useEffect, useMemo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
@@ -5,6 +6,7 @@ import useRefresh from 'hooks/useRefresh'
 import { fetchFarmsPublicDataAsync, fetchPoolsPublicDataAsync, fetchPoolsUserDataAsync } from './actions'
 import { State, Farm, Pool } from './types'
 import { QuoteToken } from '../config/constants/types'
+
 
 const ZERO = new BigNumber(0)
 
@@ -84,21 +86,24 @@ export const usePriceCakeBusd = (): BigNumber => {
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
 
-export const useTotalValue = (): BigNumber => {
+  export const useTotalValue = (): BigNumber => {
   const farms = useFarms()
   const bnbPrice = usePriceBnbBusd()
   const cakePrice = usePriceCakeBusd()
   let value = new BigNumber(0)
+
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
       let val
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = bnbPrice.times(farm.lpTotalInQuoteToken)
-      } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = cakePrice.times(farm.lpTotalInQuoteToken)
-      } else {
+      } 
+      else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
         val = farm.lpTotalInQuoteToken
+      }
+      else {
+        val = new BigNumber(farm.lpTotalInQuoteToken).times(new BigNumber(10).pow(12))
       }
       value = value.plus(val)
     }

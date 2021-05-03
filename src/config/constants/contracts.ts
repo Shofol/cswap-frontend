@@ -28,7 +28,7 @@ export default {
     137: '0x95028E5B8a734bb7E2071F96De89BABe75be9C8E',
   },
   busd: {
-    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    56: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
     97: '',
     137: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174' // USDC
   },
