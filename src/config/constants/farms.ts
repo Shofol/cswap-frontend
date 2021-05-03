@@ -2,6 +2,7 @@ import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
+
   {
     pid: 0,
     risk: 5,
@@ -38,7 +39,6 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  
   {
     pid: 2,
     isTokenOnly: true,
@@ -46,7 +46,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'WMATIC',
     lpAddresses: {
       97: '',
-      56: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827',
+      56: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827',  // 0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827
       137: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827', // WMATIC - USDC
     },
     tokenSymbol: 'MATIC',
@@ -55,9 +55,9 @@ const farms: FarmConfig[] = [
       56: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
       137: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // WMATIC
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },/*
   {
     pid: 9,
     risk: 5,
@@ -156,7 +156,6 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
   },
-
   {
     pid: 7,
     isTokenOnly: true,
@@ -176,7 +175,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-         
+
   {
     pid: 8,
     isTokenOnly: true,
@@ -196,25 +195,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
-  /* 
-  {
-    pid: 8,
-    risk: 3,
-    lpSymbol: 'WMATIC - USDC',
-    lpAddresses: {
-      97: '',
-      56: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827',
-      137: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827', // WMATIC - USDC
-    },
-    tokenSymbol: 'WMATIC',
-    tokenAddresses: {
-      97: '',
-      56: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
-      137: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // WMATIC
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  }, */
+  */
 ]
 
 export default farms
