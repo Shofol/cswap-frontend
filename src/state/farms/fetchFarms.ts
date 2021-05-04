@@ -130,6 +130,7 @@ const fetchFarms = async () => {
       }
     }),
   )
+  // console.log('data: ', data)
   return data
 }
 

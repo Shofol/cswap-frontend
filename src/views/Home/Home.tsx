@@ -16,7 +16,7 @@ const Hero = styled.div`
   flex-direction: column;
   margin: auto;
   margin-bottom: 32px;
-  padding-top: 116px;
+  padding-top: 32px;
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
         <Heading as="h1" size="xl" mb="16px">
-            Farming goes live at block 14080000! Aproximately May 4th @ 13:00 UTC.
+            Farming goes live at block 14070850! Approximately Wednesday May 5th @ 21:00 UTC.
           </Heading>
       </Hero>
       <div>
