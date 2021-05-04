@@ -57,6 +57,10 @@ const config: MenuEntry[] = [
         label: 'Docs',
         href: 'https://gameswapfinance.gitbook.io/gameswap/',
       },
+      {
+        label: 'Medium',
+        href: 'https://medium.com/@gameswapfinance',
+      }
     ],
   },
 ]
