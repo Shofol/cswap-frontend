@@ -40,7 +40,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   const [stakedOnly, setStakedOnly] = useState(false)
 
-  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== 9)
+  const activeFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier !== '0X' && farm.pid !== 10)
   const inactiveFarms = farmsLP.filter((farm) => !!farm.isTokenOnly === !!tokenMode && farm.multiplier === '0X')
 
   const stakedOnlyFarms = activeFarms.filter(
