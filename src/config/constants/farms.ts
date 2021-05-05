@@ -16,7 +16,7 @@ const farms: FarmConfig[] = [
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530', // Stonk
+      137: '0xF13e6278Da0717235BFC84D535C54461e957feED', // Stonk
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -29,13 +29,13 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '',
-      137: '0x7191EEfC86D3E83abF72f2c120A3A638971502d1', // STONK - USDC
+      137: '0xf8B95faA6745f0712CEe7bb99909F16D7696206D', // STONK - USDC
     },
     tokenSymbol: 'STONK',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530',
+      137: '0xF13e6278Da0717235BFC84D535C54461e957feED',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -199,13 +199,13 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '',
-      137: '0x7191EEfC86D3E83abF72f2c120A3A638971502d1', // STONK - USDC
+      137: '0xf8B95faA6745f0712CEe7bb99909F16D7696206D', // STONK - USDC
     },
     tokenSymbol: 'STONK',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0x62801B19b0ea8f094AD17f7DE824EEb4C54C6530',
+      137: '0xF13e6278Da0717235BFC84D535C54461e957feED',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
