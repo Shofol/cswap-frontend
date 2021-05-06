@@ -63,10 +63,15 @@ const fetchFarms = async () => {
 
       if (farmConfig.isTokenOnly) {
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals))
-        if (farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
-          tokenPriceVsQuote = new BigNumber(1)
-          
-        } else {
+        // if (farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
+          if(farmConfig.tokenSymbol === QuoteToken.STONK && farmConfig.quoteTokenSymbol === QuoteToken.BUSD)
+          {
+           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(12))
+         }
+         else if (farmConfig.tokenSymbol === QuoteToken.WBTC) {
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(2))
+         } 
+        else {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP))
         }
 
@@ -79,12 +84,6 @@ const fetchFarms = async () => {
         // Total value in staking in quote token value
         // lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(10).pow(quoteTokenDecimals))
 
-          // Total value in staking in quote token value
-          lpTotalInQuoteToken = new BigNumber(quoteTokenBlanceLP)
-          .div(new BigNumber(10).pow(18))
-          .times(new BigNumber(2))
-          .times(lpTokenRatio)
-
         // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
         tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
         const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
@@ -96,6 +95,9 @@ const fetchFarms = async () => {
         } else {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP))
         }
+
+        // Total value in staking in quote token value
+        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
       }
 
       const [info, totalAllocPoint, eggPerBlock] = await multicall(masterchefABI, [

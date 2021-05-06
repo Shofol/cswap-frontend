@@ -26,6 +26,8 @@ export enum QuoteToken {
   'BUSD' = 'BUSD',
   'TWT' = 'TWT',
   'UST' = 'UST',
+  'STONK' = 'STONK',
+  'WBTC' = 'WBTC',
 }
 
 export enum PoolCategory {
