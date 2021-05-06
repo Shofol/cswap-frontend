@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { Text, Flex, Link, LinkExternal } from '@gameswapfinance/uikit'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { Address } from 'config/constants/types'
+import BigNumber from 'bignumber.js'
+import { farmsConfig } from 'config/constants'
 
 export interface ExpandableSectionProps {
   isTokenOnly?: boolean

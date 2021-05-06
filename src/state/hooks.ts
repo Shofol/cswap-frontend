@@ -99,11 +99,8 @@ export const usePriceCakeBusd = (): BigNumber => {
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = bnbPrice.times(farm.lpTotalInQuoteToken)
       } 
-      else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = farm.lpTotalInQuoteToken
-      }
       else {
-        val = new BigNumber(farm.lpTotalInQuoteToken).times(new BigNumber(10).pow(12))
+        val = new BigNumber(farm.lpTotalInQuoteToken)
       }
       value = value.plus(val)
     }
