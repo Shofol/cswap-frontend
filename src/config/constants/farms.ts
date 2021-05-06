@@ -61,13 +61,13 @@ const farms: FarmConfig[] = [
     pid: 2,
     isTokenOnly: true,
     risk: 3,
-    lpSymbol: 'MATIC',
+    lpSymbol: 'WMATIC',
     lpAddresses: {
       97: '',
       56: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827',  // 0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827
       137: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827', // WMATIC - USDC
     },
-    tokenSymbol: 'MATIC',
+    tokenSymbol: 'WMATIC',
     tokenAddresses: {
       97: '',
       56: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
@@ -130,8 +130,8 @@ const farms: FarmConfig[] = [
       56: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270',
       137: '0x831753dd7087cac61ab5644b308642cc1c33dc13', // QUICK
     },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
   },
   {
     pid: 6,
