@@ -27,7 +27,7 @@ const CakeStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
-  const blocksTillProfit = new BigNumber(100000 * 1000000000000000000).minus(circSupply)
+  const blocksTillProfit = new BigNumber(141000 * 1000000000000000000).minus(circSupply)
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -43,7 +43,7 @@ const CakeStats = () => {
           decimals={0}
           prefix="Blocks until profit sharing "
         />
-      )}
+      )} (Delayed to 141,000 tokens minted so that dev team can test pool)
     </Heading>
   )
 }
