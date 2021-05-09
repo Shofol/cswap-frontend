@@ -1,25 +1,24 @@
 import { PoolConfig, QuoteToken, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
-  /*
-   TODO: Uncomment this to launch profit sharing
    {
-     sousId: 0,
-     tokenName: 'CAKE',
+     sousId: 1,
+     tokenName: 'Matic',
      stakingTokenName: QuoteToken.CAKE,
-     stakingTokenAddress: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+     stakingTokenAddress: '0xF13e6278Da0717235BFC84D535C54461e957feED',
      contractAddress: {
        97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
        56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+       137: '0x8B06fDDB1179871e100D87e5110bb722d74ccee1'
      },
      poolCategory: PoolCategory.CORE,
      projectLink: 'https://pancakeswap.finance/',
      harvest: true,
-     tokenPerBlock: '10',
+     tokenPerBlock: '.278',
      sortOrder: 1,
      isFinished: false,
      tokenDecimals: 18,
-   }, */
+   }
   // {
   //   sousId: 1,
   //   tokenName: 'TWT',

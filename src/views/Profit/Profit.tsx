@@ -10,10 +10,12 @@ import partition from 'lodash/partition'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { useFarms, usePriceBnbBusd, usePools } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePools, usePoolFromPid } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
+import multicall from 'utils/multicall'
+import cakeABI from 'config/abi/cake.json'
 import Coming from './components/Coming'
 import CakeStats from './components/CakeStats'
 import PoolCard from './components/PoolCard'
@@ -26,6 +28,7 @@ const Farm: React.FC = () => {
   const { account } = useWallet()
   const farms = useFarms()
   const pools = usePools(account)
+  const onlyPool = usePoolFromPid(0)
   const bnbPriceUSD = usePriceBnbBusd()
   const block = useBlock()
 
@@ -46,16 +49,39 @@ const Farm: React.FC = () => {
     const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
 
     // /!\ Assume that the farm quote price is BNB
-    const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)
-    const rewardTokenPriceInBNB = priceToBnb(
-      pool.tokenName,
-      rewardTokenFarm?.tokenPriceVsQuote,
-      rewardTokenFarm?.quoteTokenSymbol,
-    )
+     console.log('onlyPool', onlyPool)
+    console.log('RewardToken:{rewardTokenFarm}', pool);
+    console.log('farms', farms);
+    const stakingTokenPriceInBNB =  new BigNumber(farms[0].tokenPriceVsQuote)
+    const rewardTokenPriceInBNB = new BigNumber(farms[2].tokenPriceVsQuote)
 
     const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
     const apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
+
+    // console.log('totalStackedCalc', pool.balance)
+    const poolList = [{
+      address: '0xF13e6278Da0717235BFC84D535C54461e957feED',
+      name: 'balanceOf',
+      params: [pool.contractAddress[137]],
+    }]
+  
+    const nonBnbPoolsTotalStaked =  multicall(cakeABI, poolList)
+    const test = nonBnbPoolsTotalStaked.then(function(result){
+      console.log('result', new BigNumber(result[0]).toNumber());
+      return new BigNumber(result[0]).toNumber()
+    });
+    // console.log('nonBnbPoolsTotalStaked', nonBnbPoolsTotalStaked);
+
+    console.log('rewardTokenPriceInBNB', rewardTokenPriceInBNB.toNumber());
+    console.log('stakingTokenFarm', stakingTokenFarm);
+    console.log('stakingTokenPriceInBNB', stakingTokenPriceInBNB.toNumber());
+    console.log('totalRewardPricePerYear', totalRewardPricePerYear.toNumber());
+    console.log('totalTokenInPool', totalRewardPricePerYear.toNumber());
+    console.log('totalRewardPricePerYear', totalRewardPricePerYear.toNumber());
+    console.log('apy', apy.toNumber());
+    
+    const pSize = totalRewardPricePerYear.div(test).times(100)
 
     return {
       ...pool,
