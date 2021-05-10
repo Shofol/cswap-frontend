@@ -57,10 +57,15 @@ const fetchFarms = async () => {
         quoteTokenDecimals,
       ] = await multicall(erc20, calls)
 
+
+
+    
       let tokenAmount
       let lpTotalInQuoteToken
       let tokenPriceVsQuote
 
+
+      
       if (farmConfig.isTokenOnly) {
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals))
         // if (farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
@@ -99,7 +104,7 @@ const fetchFarms = async () => {
         // Total value in staking in quote token value
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
       }
-
+      
       const [info, totalAllocPoint, eggPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),

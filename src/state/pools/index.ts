@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit'
 import poolsConfig from 'config/constants/pools'
+import { ConnectorUnsupportedError } from '@binance-chain/bsc-use-wallet'
 import { fetchPoolsBlockLimits, fetchPoolsTotalStatking } from './fetchPools'
 import {
   fetchPoolsAllowance,
@@ -9,6 +10,7 @@ import {
   fetchUserPendingRewards,
 } from './fetchPoolsUser'
 import { PoolsState, Pool } from '../types'
+
 
 const initialState: PoolsState = { data: [...poolsConfig] }
 
