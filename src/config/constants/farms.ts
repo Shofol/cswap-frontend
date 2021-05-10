@@ -38,6 +38,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
   {
     pid: 1,
@@ -75,6 +76,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
   {
     pid: 3,
@@ -94,6 +96,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
    {
     pid: 4,
@@ -113,6 +116,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   }, 
   {
     pid: 5,
@@ -132,6 +136,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
   {
     pid: 6,
@@ -151,6 +156,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+    tokenDecimals: 18,
   },
   {
     pid: 7,
@@ -170,6 +176,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
   {
     pid: 8,
@@ -189,6 +196,7 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
   },
   {
     pid: 10,

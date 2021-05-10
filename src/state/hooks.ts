@@ -8,6 +8,7 @@ import { State, Farm, Pool } from './types'
 import { QuoteToken } from '../config/constants/types'
 
 
+
 const ZERO = new BigNumber(0)
 
 export const useFetchPublicData = () => {
@@ -15,7 +16,8 @@ export const useFetchPublicData = () => {
   const { slowRefresh } = useRefresh()
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
-    // dispatch(fetchPoolsPublicDataAsync())
+    dispatch(fetchPoolsPublicDataAsync())
+
   }, [dispatch, slowRefresh])
 }
 
@@ -57,10 +59,11 @@ export const usePools = (account): Pool[] => {
       dispatch(fetchPoolsUserDataAsync(account))
     }
   }, [account, dispatch, fastRefresh])
-
+  
   const pools = useSelector((state: State) => state.pools.data)
   return pools
 }
+
 
 export const usePoolFromPid = (sousId): Pool => {
   const pool = useSelector((state: State) => state.pools.data.find((p) => p.sousId === sousId))

@@ -14,8 +14,6 @@ import { useFarms, usePriceBnbBusd, usePools, usePoolFromPid } from 'state/hooks
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import multicall from 'utils/multicall'
-import cakeABI from 'config/abi/cake.json'
 import Coming from './components/Coming'
 import CakeStats from './components/CakeStats'
 import PoolCard from './components/PoolCard'
@@ -28,7 +26,6 @@ const Farm: React.FC = () => {
   const { account } = useWallet()
   const farms = useFarms()
   const pools = usePools(account)
-  const onlyPool = usePoolFromPid(0)
   const bnbPriceUSD = usePriceBnbBusd()
   const block = useBlock()
 
@@ -49,40 +46,18 @@ const Farm: React.FC = () => {
     const stakingTokenFarm = farms.find((s) => s.tokenSymbol === pool.stakingTokenName)
 
     // /!\ Assume that the farm quote price is BNB
-     console.log('onlyPool', onlyPool)
-    console.log('RewardToken:{rewardTokenFarm}', pool);
-    console.log('farms', farms);
-    const stakingTokenPriceInBNB =  new BigNumber(farms[0].tokenPriceVsQuote)
-    const rewardTokenPriceInBNB = new BigNumber(farms[2].tokenPriceVsQuote)
+    const stakingTokenPriceInBNB = isBnbPool ? new BigNumber(1) : new BigNumber(stakingTokenFarm?.tokenPriceVsQuote)
+    const rewardTokenPriceInBNB = priceToBnb(
+      pool.tokenName,
+      rewardTokenFarm?.tokenPriceVsQuote,
+      rewardTokenFarm?.quoteTokenSymbol,
+    )
 
     const totalRewardPricePerYear = rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+
     const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
     const apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
-
-    // console.log('totalStackedCalc', pool.balance)
-    const poolList = [{
-      address: '0xF13e6278Da0717235BFC84D535C54461e957feED',
-      name: 'balanceOf',
-      params: [pool.contractAddress[137]],
-    }]
-  
-    const nonBnbPoolsTotalStaked =  multicall(cakeABI, poolList)
-    const test = nonBnbPoolsTotalStaked.then(function(result){
-      console.log('result', new BigNumber(result[0]).toNumber());
-      return new BigNumber(result[0]).toNumber()
-    });
-    // console.log('nonBnbPoolsTotalStaked', nonBnbPoolsTotalStaked);
-
-    console.log('rewardTokenPriceInBNB', rewardTokenPriceInBNB.toNumber());
-    console.log('stakingTokenFarm', stakingTokenFarm);
-    console.log('stakingTokenPriceInBNB', stakingTokenPriceInBNB.toNumber());
-    console.log('totalRewardPricePerYear', totalRewardPricePerYear.toNumber());
-    console.log('totalTokenInPool', totalRewardPricePerYear.toNumber());
-    console.log('totalRewardPricePerYear', totalRewardPricePerYear.toNumber());
-    console.log('apy', apy.toNumber());
     
-    const pSize = totalRewardPricePerYear.div(test).times(100)
-
     return {
       ...pool,
       isFinished: pool.sousId === 0 ? false : pool.isFinished || block > pool.endBlock,
@@ -102,7 +77,7 @@ const Farm: React.FC = () => {
           <ul>
             <li>Stake STONK to revieve dividend payouts.</li>
             <li>You can unstake at any time.</li>
-            <li>Dividends are distributed linearly over each week.</li>
+            <li>Dividends are distributed linearly over the week.</li>
           </ul>
         </div>
         <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
@@ -119,7 +94,7 @@ const Farm: React.FC = () => {
               <PoolCard key={pool.sousId} pool={pool} />
             ))}
           </>
-          <Coming />
+          <Coming /> 
         </Route>
         <Route path={`${path}/history`}>
           {orderBy(finishedPools, ['sortOrder']).map((pool) => (
