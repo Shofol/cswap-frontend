@@ -9,7 +9,7 @@ const pools: PoolConfig[] = [
      contractAddress: {
        97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
        56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
-      137: '0x409a461b1F7157880dF2e9d9780a2bb2fc316C82'
+      137: '0xBA13f14f73e88A2Aa264EC3063b32f4b4972E226'
      },
      poolCategory: PoolCategory.COMMUNITY,
      projectLink: 'https://pancakeswap.finance/',
