@@ -7,7 +7,7 @@ import useBlock from 'hooks/useBlock'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
 import { getCakeAddress } from 'utils/addressHelpers'
-import CardValue from '../../Home/components/CardValue'
+import CardValue from './CardValue'
 import { useFarms, usePriceCakeBusd } from '../../../state/hooks'
 
 const StyledCakeStats = styled(Card)`
@@ -18,18 +18,16 @@ const StyledCakeStats = styled(Card)`
 const Row = styled.div`
   align-items: center;
   display: flex;
-  font-size: 14px;
   justify-content: space-between;
   margin-bottom: 8px;
 `
 
-const CakeStats = () => {
+const ProfitStats = () => {
   const totalSupply = useTotalSupply()
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const block = useBlock()
-  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
-  const blocksTillProfit = new BigNumber(141000 * 1000000000000000000).minus(circSupply)
+
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -37,17 +35,10 @@ const CakeStats = () => {
   }
 
   return (
-    <Heading as="h3">
-      {blocksTillProfit && (
-        <CardValue
-          fontSize="24px"
-          value={Math.max(14504555 - block, 0)}
-          decimals={0}
-          prefix="Blocks until profit sharing "
-        />
-      )} 
+    <Heading as="h2" color="secondary" mb="50px" size="xl" style={{ textAlign: 'center' }}>
+      Dividend Pool Begins in {Math.max(14504555 - block, 0)} Blocks
     </Heading>
   )
 }
 
-export default CakeStats
+export default ProfitStats

@@ -12,7 +12,7 @@ export default {
   sousMasterChef: {
     56: '',
     97: '',
-    137: '0x409a461b1F7157880dF2e9d9780a2bb2fc316C82'
+    137: '0xBA13f14f73e88A2Aa264EC3063b32f4b4972E226'
   },
   wbnb: {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
