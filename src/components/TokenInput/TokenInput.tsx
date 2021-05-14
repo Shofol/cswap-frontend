@@ -5,6 +5,7 @@ import { Button } from '@gameswapfinance/uikit'
 import useI18n from '../../hooks/useI18n'
 import Input, { InputProps } from '../Input'
 
+
 interface TokenInputProps extends InputProps {
   max: number | string
   symbol: string

@@ -189,7 +189,7 @@
     {
       "data": {
         "stringId": 348,
-        "text": "Pool"
+        "text": "Dividends"
       }
     },
     {
@@ -213,7 +213,7 @@
     {
       "data": {
         "stringId": 356,
-        "text": "View on BscScan"
+        "text": "View on Explorer"
       }
     },
     {
@@ -315,7 +315,13 @@
     {
       "data": {
         "stringId": 410,
-        "text": "End"
+        "text": "Blocks until end"
+      }
+    },
+    {
+      "data": {
+        "stringId": 411,
+        "text": "Blocks until start"
       }
     },
     {
@@ -1209,7 +1215,7 @@
     {
       "data": {
         "stringId": 10000,
-        "text": "Deposit Fee will be used to buyback Stonk"
+        "text": "Deposit Fee will be paid to holders as dividends"
       }
     },
     {

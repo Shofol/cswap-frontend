@@ -26,6 +26,11 @@ export enum QuoteToken {
   'BUSD' = 'BUSD',
   'TWT' = 'TWT',
   'UST' = 'UST',
+  'STONK' = 'STONK',
+  'WBTC' = 'WBTC',
+  'WMATIC' = 'WMATIC',
+  'QUICK' = 'QUICK',
+  'WETH' = 'WETH',
 }
 
 export enum PoolCategory {
@@ -37,6 +42,7 @@ export enum PoolCategory {
 export interface Address {
   97?: string
   56: string
+  137?: string
 }
 
 export interface FarmConfig {
@@ -50,6 +56,7 @@ export interface FarmConfig {
   multiplier?: string
   isTokenOnly?: boolean
   isCommunity?: boolean
+  tokenDecimals?: number
   risk: number
   dual?: {
     rewardPerBlock: number

@@ -9,6 +9,7 @@ import BigNumber from 'bignumber.js'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
+
 export const fetchPoolsBlockLimits = async () => {
   const poolsWithEnd = poolsConfig.filter((p) => p.sousId !== 0)
   const callsStartBlock = poolsWithEnd.map((poolConfig) => {
@@ -60,7 +61,6 @@ export const fetchPoolsTotalStatking = async () => {
 
   const nonBnbPoolsTotalStaked = await multicall(cakeABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
-
   return [
     ...nonBnbPools.map((p, index) => ({
       sousId: p.sousId,

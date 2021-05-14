@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { Text, Flex, Link, LinkExternal } from '@gameswapfinance/uikit'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { Address } from 'config/constants/types'
+import BigNumber from 'bignumber.js'
+import { farmsConfig } from 'config/constants'
 
 export interface ExpandableSectionProps {
   isTokenOnly?: boolean
@@ -55,8 +57,8 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
         <StyledLinkExternal
           href={
             isTokenOnly
-              ? `https://exchange.goosedefi.com/#/swap/${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
-              : `https://exchange.goosedefi.com/#/add/${liquidityUrlPathParts}`
+              ? `https://quickswap.exchange/#/swap/${tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
+              : `https://quickswap.exchange/#/add/${liquidityUrlPathParts}`
           }
         >
           {lpLabel}

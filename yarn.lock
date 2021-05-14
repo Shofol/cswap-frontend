@@ -1562,10 +1562,10 @@
     "@ethersproject/properties" "^5.0.3"
     "@ethersproject/strings" "^5.0.4"
 
-"@gameswapfinance/uikit@^0.10.6":
-  version "0.10.6"
-  resolved "https://registry.yarnpkg.com/@gameswapfinance/uikit/-/uikit-0.10.6.tgz#d91e932cd13bca9e3600c8ea3c3feee352c001f8"
-  integrity sha512-usOFaSrNIHlH2pmvkzcj/wrMk7FKxQt925+8yehvuKtDgl1DFwJ3AzTq54OgiRek1tzWfgGvvPc5/5bYYornTQ==
+"@gameswapfinance/uikit@^0.10.10":
+  version "0.10.10"
+  resolved "https://registry.yarnpkg.com/@gameswapfinance/uikit/-/uikit-0.10.10.tgz#435282fceb91bee2b01b56cd7c277a1f15df8bf4"
+  integrity sha512-luL3ksCFNIujoPKRVNH8BR3vDlAkSPgK50w9/R0P6nfmcOWKmuoZYZ5Q3BoEbsk+W9nP84qK0TvWnam9pdfycg==
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"

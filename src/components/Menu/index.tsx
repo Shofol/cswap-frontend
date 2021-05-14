@@ -25,7 +25,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
-      priceLink="https://dex.guru/token/0xe0e514c71282b6f4e823703a39374cf58dc3ea4f-bsc"
+      priceLink="https://explorer-mainnet.maticvigil.com/tokens/0xF13e6278Da0717235BFC84D535C54461e957feED/token-transfers"
       {...props}
     />
   )

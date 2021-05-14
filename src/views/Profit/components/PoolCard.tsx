@@ -134,7 +134,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         {!isOldSyrup ? (
           <BalanceAndCompound>
             <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
-            {sousId === 0 && account && harvest && (
+            {sousId === 9 && account && harvest && (
               <HarvestButton
                 disabled={!earnings.toNumber() || pendingTx}
                 text={pendingTx ? TranslateString(999, 'Compounding') : TranslateString(999, 'Compound')}
@@ -145,7 +145,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         ) : (
           <OldSyrupTitle hasBalance={accountHasStakedBalance} />
         )}
-        <Label isFinished={isFinished && sousId !== 0} text={TranslateString(330, `${tokenName} earned`)} />
+        <Label isFinished={isFinished && sousId !== 0} text={`${tokenName} Earned`} />
         <StyledCardActions>
           {!account && <UnlockButton />}
           {account &&
@@ -191,9 +191,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <StyledDetails>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label={stakingTokenName}>
-              🥞{' '}
+            <div style={{ flex: 1 }}>
+              {TranslateString(384, 'Your Stake')}:
+              <Image src={`/images/tokens/${stakingTokenName}.png`} width={20} height={20} alt="Stonk" />{' '}
+              
+            </div>
+            
             </span>
-            {TranslateString(384, 'Your Stake')}:
+            
           </div>
           <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
         </StyledDetails>

@@ -40,21 +40,13 @@ const Coming: React.FC = () => {
         <CardTitle>STONK Dividends</CardTitle>
         <Image src="/images/egg/9.png" width={64} height={64} alt="Dividends" />
         <br />
-        <Label>Distributes weekly fee income back to STONK holders</Label>
-        <Button variant="secondary" as="a" href="" external fullWidth mb="16px">
-          Coming Soon
+        <Label>Distributes fee income back to STONK holders</Label>
+        <Button variant="secondary" fullWidth mb="16px">
+          <span style={{fontSize: 'x-large'}}>$10,000</span> of Matic Dividends
         </Button>
-        <DetailPlaceholder>
-          <div style={{ flex: 1 }}>{TranslateString(736, 'APR')}:</div>
-          <Value>TBD</Value>
-        </DetailPlaceholder>
-        <DetailPlaceholder>
-          <div style={{ flex: 1 }}>{TranslateString(384, 'Your Stake')}:</div>
-          <Value>0 STONK</Value>
-        </DetailPlaceholder>
       </div>
       <Footer>
-        <CommunityTag />
+      <div style={{ flex: 1 }}> Let us know what <b>DIVIDEND</b> you would like to see next!</div>
       </Footer>
     </Card>
   )

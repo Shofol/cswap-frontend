@@ -6,6 +6,7 @@ import Page from 'components/layout/Page'
 import FarmStakingCard from './components/FarmStakingCard'
 import LotteryCard from './components/LotteryCard'
 import CakeStats from './components/CakeStats'
+import ProfitStats from './components/ProfitStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
@@ -16,7 +17,7 @@ const Hero = styled.div`
   flex-direction: column;
   margin: auto;
   margin-bottom: 32px;
-  padding-top: 116px;
+  padding-top: 32px;
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -54,6 +55,7 @@ const Home: React.FC = () => {
       <Hero>
         <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
       </Hero>
+      <ProfitStats/>
       <div>
         <Cards>
           <FarmStakingCard />

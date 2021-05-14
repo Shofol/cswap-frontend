@@ -1,3 +1,4 @@
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript'
 import BigNumber from 'bignumber.js'
 import { useEffect, useMemo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
@@ -6,6 +7,8 @@ import { fetchFarmsPublicDataAsync, fetchPoolsPublicDataAsync, fetchPoolsUserDat
 import { State, Farm, Pool } from './types'
 import { QuoteToken } from '../config/constants/types'
 
+
+
 const ZERO = new BigNumber(0)
 
 export const useFetchPublicData = () => {
@@ -13,7 +16,8 @@ export const useFetchPublicData = () => {
   const { slowRefresh } = useRefresh()
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
-    // dispatch(fetchPoolsPublicDataAsync())
+    dispatch(fetchPoolsPublicDataAsync())
+
   }, [dispatch, slowRefresh])
 }
 
@@ -55,10 +59,11 @@ export const usePools = (account): Pool[] => {
       dispatch(fetchPoolsUserDataAsync(account))
     }
   }, [account, dispatch, fastRefresh])
-
+  
   const pools = useSelector((state: State) => state.pools.data)
   return pools
 }
+
 
 export const usePoolFromPid = (sousId): Pool => {
   const pool = useSelector((state: State) => state.pools.data.find((p) => p.sousId === sousId))
@@ -84,21 +89,21 @@ export const usePriceCakeBusd = (): BigNumber => {
   return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
 }
 
-export const useTotalValue = (): BigNumber => {
+  export const useTotalValue = (): BigNumber => {
   const farms = useFarms()
   const bnbPrice = usePriceBnbBusd()
   const cakePrice = usePriceCakeBusd()
   let value = new BigNumber(0)
+
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
     if (farm.lpTotalInQuoteToken) {
       let val
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = bnbPrice.times(farm.lpTotalInQuoteToken)
-      } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = cakePrice.times(farm.lpTotalInQuoteToken)
-      } else {
-        val = farm.lpTotalInQuoteToken
+      } 
+      else {
+        val = new BigNumber(farm.lpTotalInQuoteToken)
       }
       value = value.plus(val)
     }
