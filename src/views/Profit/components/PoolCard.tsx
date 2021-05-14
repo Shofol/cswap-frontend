@@ -131,7 +131,6 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             />
           )}
         </div>
-        <div><b>Deposit Fee: 10%</b></div>
         {!isOldSyrup ? (
           <BalanceAndCompound>
             <Balance value={getBalanceNumber(earnings, tokenDecimals)} isDisabled={isFinished} />
