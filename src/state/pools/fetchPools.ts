@@ -2,9 +2,10 @@ import poolsConfig from 'config/constants/pools'
 import sousChefABI from 'config/abi/sousChef.json'
 import cakeABI from 'config/abi/cake.json'
 import wbnbABI from 'config/abi/weth.json'
+import masterchefABI from 'config/abi/masterchef.json'
 import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
-import { getWbnbAddress } from 'utils/addressHelpers'
+import { getWbnbAddress, getSousMasterChefAddress } from 'utils/addressHelpers'
 import BigNumber from 'bignumber.js'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
@@ -35,6 +36,8 @@ export const fetchPoolsBlockLimits = async () => {
       sousId: cakePoolConfig.sousId,
       startBlock: new BigNumber(startBlock).toJSON(),
       endBlock: new BigNumber(endBlock).toJSON(),
+      // This is currently hard coded
+      depositFee: "10",
     }
   })
 }
