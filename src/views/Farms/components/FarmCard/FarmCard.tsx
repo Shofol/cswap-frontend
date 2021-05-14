@@ -116,9 +116,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     return farm.lpTotalInQuoteToken
   }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
-  const totalValueFormated = totalValue
+  const totalBTCValueFormatted = farm.lpTotalInBTC
+    ? `${Number(farm.lpTotalInBTC).toLocaleString(undefined, { maximumFractionDigits: 8 })}`
+    : '-'
+
+  const totalValueFormatted = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
+
+  
 
   const lpLabel = farm.lpSymbol
   const earnLabel = 'STONK'
@@ -133,7 +139,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'EGG' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'STONK' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -189,7 +195,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
               ? `https://quickswap.exchange/token/${farm.tokenAddresses[process.env.REACT_APP_CHAIN_ID]}`
               : `https://quickswap.exchange/token/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`
           }
-          totalValueFormated={totalValueFormated}
+          totalValueFormated={totalValueFormatted}
+          totalBTCValueFormatted ={totalBTCValueFormatted}
           lpLabel={lpLabel}
           quoteTokenAdresses={quoteTokenAdresses}
           quoteTokenSymbol={quoteTokenSymbol}

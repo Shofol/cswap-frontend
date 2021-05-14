@@ -8,7 +8,62 @@ import { QuoteToken } from '../../config/constants/types'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
+const valueinBTC = async() => {
+  const farmConfig = farmsConfig.find(f=>f.tokenSymbol==="WBTC");
+  const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
+  const calls = [
+    // Balance of token in the LP contract
+    {
+      address: farmConfig.tokenAddresses[CHAIN_ID],
+      name: 'balanceOf',
+      params: [lpAdress],
+    },
+    // Balance of quote token on LP contract
+    {
+      address: farmConfig.quoteTokenAdresses[CHAIN_ID],
+      name: 'balanceOf',
+      params: [lpAdress],
+    },
+    // Balance of LP tokens in the master chef contract
+    {
+      address: farmConfig.isTokenOnly ? farmConfig.tokenAddresses[CHAIN_ID] : lpAdress,
+      name: 'balanceOf',
+      params: [getMasterChefAddress()],
+    },
+    // Total supply of LP tokens
+    {
+      address: lpAdress,
+      name: 'totalSupply',
+    },
+    // Token decimals
+    {
+      address: farmConfig.tokenAddresses[CHAIN_ID],
+      name: 'decimals',
+    },
+    // Quote token decimals
+    {
+      address: farmConfig.quoteTokenAdresses[CHAIN_ID],
+      name: 'decimals',
+    },
+  ]
+
+  const [
+    tokenBalanceLP,
+    quoteTokenBlanceLP,
+    lpTokenBalanceMC,
+    lpTotalSupply,
+    tokenDecimals,
+    quoteTokenDecimals,
+  ] = await multicall(erc20, calls)
+
+  const tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(2))
+
+  return(tokenPriceVsQuote.toNumber())
+
+}
+
 const fetchFarms = async () => {
+  
   const data = await Promise.all(
     farmsConfig.map(async (farmConfig) => {
       const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
@@ -129,6 +184,7 @@ const fetchFarms = async () => {
         tokenAmount: tokenAmount.toJSON(),
         // quoteTokenAmount: quoteTokenAmount,
         lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
+        lpTotalInBTC: lpTotalInQuoteToken.div(await valueinBTC()).toJSON(),
         tokenPriceVsQuote: tokenPriceVsQuote.toJSON(),
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
