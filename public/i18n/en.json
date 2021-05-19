@@ -189,7 +189,7 @@
     {
       "data": {
         "stringId": 348,
-        "text": "Pool"
+        "text": "Dividends"
       }
     },
     {
@@ -315,7 +315,13 @@
     {
       "data": {
         "stringId": 410,
-        "text": "End"
+        "text": "Blocks until end"
+      }
+    },
+    {
+      "data": {
+        "stringId": 411,
+        "text": "Blocks until start"
       }
     },
     {
