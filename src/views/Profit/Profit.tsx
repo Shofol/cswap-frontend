@@ -75,7 +75,7 @@ const Farm: React.FC = () => {
             {TranslateString(282, 'Profit Sharing Pool')}
           </Heading>
           <ul>
-            <li>Stake STONK to revieve dividend payouts.</li>
+            <li>Stake STONKX to revieve dividend payouts.</li>
             <li>You can unstake at any time.</li>
             <li>Dividends are distributed linearly over the week.</li>
           </ul>

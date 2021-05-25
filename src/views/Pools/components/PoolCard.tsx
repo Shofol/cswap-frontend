@@ -145,7 +145,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         ) : (
           <OldSyrupTitle hasBalance={accountHasStakedBalance} />
         )}
-        <Label isFinished={isFinished && sousId !== 0} text='STONK Earned' />
+        <Label isFinished={isFinished && sousId !== 0} text='STONKX Earned' />
         <StyledCardActions>
           {!account && <UnlockButton />}
           {account &&

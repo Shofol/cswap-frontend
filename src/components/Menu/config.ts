@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://quickswap.exchange/#/swap?outputCurrency=0xF13e6278Da0717235BFC84D535C54461e957feED',
+        href: 'https://quickswap.exchange/#/swap?outputCurrency=0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
       },
       {
         label: 'Liquidity',
-        href: 'https://quickswap.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0xF13e6278Da0717235BFC84D535C54461e957feED',
+        href: 'https://quickswap.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
       },
     ],
   },
