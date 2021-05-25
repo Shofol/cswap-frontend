@@ -30,6 +30,7 @@ const CakeStats = () => {
   const block = useBlock()
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
   const blocksTillProfit = new BigNumber(141000 * 1000000000000000000).minus(circSupply)
+  const startBlock = 14914094 + (7 * 24 * 60 * 60 / 2.1) // one week
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -41,7 +42,7 @@ const CakeStats = () => {
       {blocksTillProfit && (
         <CardValue
           fontSize="24px"
-          value={Math.max(14504555 - block, 0)}
+          value={Math.max(startBlock - block, 0)}
           decimals={0}
           prefix="Blocks until profit sharing "
         />

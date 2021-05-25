@@ -63,6 +63,11 @@ const config: MenuEntry[] = [
       }
     ],
   },
+  {
+     label: 'Old Stonk',
+     icon: 'NftIcon',
+     href: 'https://gameswap.netlify.app',
+   },
 ]
 
 export default config
