@@ -36,7 +36,7 @@ const ProfitStats = () => {
 
   return (
     <Heading as="h2" color="secondary" mb="50px" size="xl" style={{ textAlign: 'center' }}>
-      Dividend Pool Begins in {Math.max(14504555 - block, 0)} Blocks
+      Farming Begins in {Math.round(Math.max((15184000 - block) , 0))} Blocks ({Math.round(Math.max((15184000 - block) * 2 / 60 / 60, 0))} Hours)
     </Heading>
   )
 }
