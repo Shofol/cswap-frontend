@@ -7,6 +7,11 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
+    label: 'STONKX',
+    icon: 'NftIcon',
+    href: 'https://stonk.farm',
+  },
+  {
     label: 'Trade',
     icon: 'TradeIcon',
     items: [

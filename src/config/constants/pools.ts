@@ -3,18 +3,18 @@ import { PoolConfig, QuoteToken, PoolCategory } from './types'
 const pools: PoolConfig[] = [
    {
      sousId: 1,
-     tokenName: 'WMATIC',
+     tokenName: 'STONKX',
      stakingTokenName: QuoteToken.STONK,
      stakingTokenAddress: '0xF13e6278Da0717235BFC84D535C54461e957feED',
      contractAddress: {
        97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
        56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
-      137: '0xBA13f14f73e88A2Aa264EC3063b32f4b4972E226'
+      137: '0xE0B5CA9B57F7ad06C04D89B794147BF277B81FA5'
      },
      poolCategory: PoolCategory.COMMUNITY,
      projectLink: 'https://pancakeswap.finance/',
      harvest: true,
-     tokenPerBlock: '.062',
+     tokenPerBlock: '.00345',
      sortOrder: 1,
      isFinished: false,
      tokenDecimals: 18,
