@@ -20,6 +20,25 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  // 0xc293225BA90C545357761AF2a09e71504275cEE2
+  {
+    pid: 13,
+    risk: 5,
+    lpSymbol: 'STONKX-WMATIC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xc293225BA90C545357761AF2a09e71504275cEE2', // STONKX - WMATIC
+    },
+    tokenSymbol: 'STONKX',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
+    },
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+  },
   {
     pid: 9,
     risk: 5,
