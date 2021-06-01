@@ -64,6 +64,11 @@ const config: MenuEntry[] = [
     ],
   },
   {
+    label: 'Rug Doc Audit',
+    icon: 'AuditIcon',
+    href: 'https://rugdoc.io/project/gameswap-stonkx/',
+  },
+  {
      label: 'Old Stonk',
      icon: 'NftIcon',
      href: 'https://gameswap.netlify.app',
