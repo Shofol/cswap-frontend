@@ -9,12 +9,12 @@ const pools: PoolConfig[] = [
      contractAddress: {
        97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
        56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
-      137: '0xBA13f14f73e88A2Aa264EC3063b32f4b4972E226'
+      137: '0x3E15097046d61477FF8d6beA1b2751899726D70B'
      },
      poolCategory: PoolCategory.COMMUNITY,
      projectLink: 'https://pancakeswap.finance/',
      harvest: true,
-     tokenPerBlock: '.062',
+     tokenPerBlock: '.03125',
      sortOrder: 1,
      isFinished: false,
      tokenDecimals: 18,

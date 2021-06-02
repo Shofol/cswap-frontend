@@ -192,7 +192,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <Flex justifyContent="space-between">
         <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
         <Text bold style={{ fontSize: '24px' }}>
-          {pool.depositFee}%
+          5%
         </Text>
       </Flex>
         <StyledCardActions>
