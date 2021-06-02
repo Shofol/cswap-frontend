@@ -27,7 +27,7 @@ const ProfitStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const block = useBlock()
-
+  const startBlock = 15184000 + (100000*2)
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -36,7 +36,7 @@ const ProfitStats = () => {
 
   return (
     <Heading as="h2" color="secondary" mb="50px" size="xl" style={{ textAlign: 'center' }}>
-      Farming Begins in {Math.round(Math.max((15184000 - block) , 0))} Blocks ({Math.round(Math.max((15184000 - block) * 2 / 60 / 60, 0))} Hours)
+      Dividend Pool Begins in {Math.round(Math.max((startBlock- block) , 0))} Blocks ({Math.round(Math.max((startBlock- block) * 2 / 60 / 60, 0))} Hours)
     </Heading>
   )
 }
