@@ -30,7 +30,7 @@ const CakeStats = () => {
   const block = useBlock()
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
   const blocksTillProfit = new BigNumber(141000 * 1000000000000000000).minus(circSupply)
-  const startBlock = 15184000 + (100000*2) // 100k tokens
+  const startBlock = 15184000 + (100000) // 50k tokens
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
