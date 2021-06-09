@@ -64,6 +64,11 @@ const config: MenuEntry[] = [
     ],
   },
   {
+    label: 'Road Map',
+    icon: 'RoadmapIcon',
+    href: 'https://gameswapfinance.gitbook.io/gameswap/roadmap',
+  },
+  {
     label: 'Rug Doc Security Review',
     icon: 'AuditIcon',
     href: 'https://rugdoc.io/project/gameswap-stonkx/',
