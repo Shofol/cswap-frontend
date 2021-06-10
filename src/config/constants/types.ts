@@ -31,6 +31,7 @@ export enum QuoteToken {
   'WMATIC' = 'WMATIC',
   'QUICK' = 'QUICK',
   'WETH' = 'WETH',
+  'STONKY' = 'STONKY',
 }
 
 export enum PoolCategory {
