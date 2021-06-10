@@ -12,13 +12,31 @@ const pools: PoolConfig[] = [
       137: '0x3E15097046d61477FF8d6beA1b2751899726D70B'
      },
      poolCategory: PoolCategory.COMMUNITY,
-     projectLink: 'https://pancakeswap.finance/',
+     projectLink: 'https://stonk.farm/',
      harvest: true,
      tokenPerBlock: '.03125',
      sortOrder: 1,
      isFinished: false,
      tokenDecimals: 18,
-   }
+   },
+   {
+    sousId: 2,
+    tokenName: 'STONKY',
+    stakingTokenName: QuoteToken.STONKX,
+    stakingTokenAddress: '0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
+    contractAddress: {
+      97: '',
+      56: '',
+     137: '0x900fCB76Fc1e50947c05d94AF828932DB67c47F5'
+    },
+    poolCategory: PoolCategory.COMMUNITY,
+    projectLink: 'https://stonk.farm/',
+    harvest: true,
+    tokenPerBlock: '.00012153',
+    sortOrder: 1,
+    isFinished: false,
+    tokenDecimals: 18,
+  },
   // {
   //   sousId: 1,
   //   tokenName: 'TWT',
