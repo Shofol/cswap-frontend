@@ -11,8 +11,12 @@ const config: MenuEntry[] = [
     icon: 'TradeIcon',
     items: [
       {
-        label: 'Exchange',
+        label: 'Buy StonkX',
         href: 'https://quickswap.exchange/#/swap?outputCurrency=0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
+      },
+      {
+        label: 'Buy StonkY',
+        href: 'https://quickswap.exchange/#/swap?outputCurrency=0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
       },
       {
         label: 'Liquidity',
