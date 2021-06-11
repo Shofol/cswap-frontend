@@ -77,6 +77,66 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+   {
+    pid: 14,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'Fish',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x0Df9e46C0eAEdf41B9d4bbE2Cea2aF6E8181b033', // Fish - USDC
+    },
+    tokenSymbol: 'Fish',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x3a3df212b7aa91aa0402b9035b098891d276572b', // Fish
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+   {
+    pid: 15,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'Iron',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x2Bbe0F728f4d5821F84eeE0432D2A4be7C0cB7Fc', // IRON - USDC
+    },
+    tokenSymbol: 'Iron',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0xd86b5923f3ad7b585ed81b448170ae026c65ae9a', // IRON
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+   {
+    pid: 16,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'PolyDoge',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x8a953cfe442c5e8855cc6c61b1293fa648bae472', // Polydoge - USDC
+    },
+    tokenSymbol: 'PolyDoge',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x8a953cfe442c5e8855cc6c61b1293fa648bae472', // polydoge
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
   {
     pid: 2,
     isTokenOnly: true,
