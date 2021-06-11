@@ -32,6 +32,9 @@ export enum QuoteToken {
   'QUICK' = 'QUICK',
   'WETH' = 'WETH',
   'STONKY' = 'STONKY',
+  'FISH' = 'Fish',
+  'IRON' = 'Iron',
+  'POLYDOGE' = 'PolyDoge',
 }
 
 export enum PoolCategory {

@@ -125,7 +125,7 @@ const farms: FarmConfig[] = [
     lpAddresses: {
       97: '',
       56: '',  
-      137: '0x8a953cfe442c5e8855cc6c61b1293fa648bae472', // Polydoge - USDC
+      137: '0x7b3e67e63906d8576466c2f48158a30be0a9e36c', // Polydoge - USDC
     },
     tokenSymbol: 'PolyDoge',
     tokenAddresses: {
