@@ -87,6 +87,7 @@ interface FarmCardProps {
   bnbPrice?: BigNumber
   ethereum?: provider
   account?: string
+  harvestSeconds?: BigNumber
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account }) => {
@@ -123,10 +124,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  
+  const harvestIntervalHours = farm.harvestInterval ? farm.harvestInterval.div(3600) : 0
 
   const lpLabel = farm.lpSymbol
-  const earnLabel = 'STONKX'
+  const earnLabel = 'STONKY'
   const farmAPY =
     farm.apy &&
     farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
@@ -135,10 +136,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     })
 
   const { quoteTokenAdresses, quoteTokenSymbol, tokenAddresses, risk } = farm
-
   return (
     <FCard>
-      {farm.tokenSymbol === 'STONKX' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'STONKY' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
@@ -171,13 +171,17 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
       )}
       <Flex justifyContent="space-between">
         <Text>{TranslateString(318, 'Earn')}:</Text>
-        <Text bold>{earnLabel}</Text>
+        <Text>{earnLabel}</Text>
       </Flex>
       <Flex justifyContent="space-between">
-        <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
-        <Text bold style={{ fontSize: '24px' }}>
+        <Text>{TranslateString(10001, 'Deposit Fee')}:</Text>
+        <Text>
           {farm.depositFeeBP / 100}%
         </Text>
+      </Flex>
+      <Flex justifyContent="space-between">
+              <Text>Harvest Lockup:</Text>
+              <Text>{`${harvestIntervalHours} Hour(s)`}</Text>
       </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} />
       <Divider />

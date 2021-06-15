@@ -35,6 +35,10 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
 
+  // Calculate hours until harvest
+  const harvestTime = farm.userData != null && farm.userData.lockPeriod > new BigNumber(0) ? new Date(Number(farm.userData.lockPeriod.toString())*1000) : new Date()
+  const secondsUntilHarvest = (harvestTime.getTime() - new Date().getTime())/1000
+
   const lpContract = useMemo(() => {
     if (isTokenOnly) {
       return getContract(ethereum as provider, tokenAddress)
@@ -75,13 +79,13 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account }
       <Flex>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
-          STONKX
+          STONKY
         </Text>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(999, 'Earned')}
         </Text>
       </Flex>
-      <HarvestAction earnings={earnings} pid={pid} />
+      <HarvestAction earnings={earnings} pid={pid} secondsUntilHarvest={secondsUntilHarvest}/>
       <Flex>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {lpName}

@@ -63,7 +63,7 @@ export const fetchFarmUserEarnings = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
     return {
       address: masterChefAdress,
-      name: 'pendingEgg',
+      name: 'pendingStonk',
       params: [farm.pid, account],
     }
   })
@@ -73,4 +73,22 @@ export const fetchFarmUserEarnings = async (account: string) => {
     return new BigNumber(earnings).toJSON()
   })
   return parsedEarnings
+}
+
+export const fetchFarmEarningsLockPeriod = async (account: string) => {
+  const masterChefAdress = getMasterChefAddress()
+
+  const calls = farmsConfig.map((farm) => {
+    return {
+      address: masterChefAdress,
+      name: 'userInfo',
+      params: [farm.pid, account],
+    }
+  })
+
+  const rawLockPeriods = await multicall(masterchefABI, calls)
+  const parsedLockPeriods = rawLockPeriods.map((stakedBalance) => {
+    return new BigNumber(stakedBalance[3]._hex).toJSON()
+  })
+  return parsedLockPeriods
 }

@@ -85,6 +85,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           cakePrice={cakePrice}
           ethereum={ethereum}
           account={account}
+          harvestSeconds={farm.harvestInterval}
         />
       ))
     },

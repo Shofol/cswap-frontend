@@ -173,7 +173,7 @@ const fetchFarms = async () => {
         },
         {
           address: getMasterChefAddress(),
-          name: 'eggPerBlock',
+          name: 'stonkPerBlock',
         },
       ])
 
@@ -185,12 +185,13 @@ const fetchFarms = async () => {
         tokenAmount: tokenAmount.toJSON(),
         // quoteTokenAmount: quoteTokenAmount,
         lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
-        lpTotalInBTC: lpTotalInQuoteToken.div(await valueinBTC()).toJSON(),
+        lpTotalInBTC: 0, // @HACK lpTotalInQuoteToken.div(await valueinBTC()).toJSON(),
         tokenPriceVsQuote: tokenPriceVsQuote.toJSON(),
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
         eggPerBlock: new BigNumber(eggPerBlock).toNumber(),
+        harvestInterval: info.harvestInterval
       }
     }),
   )
