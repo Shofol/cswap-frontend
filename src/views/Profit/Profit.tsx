@@ -15,6 +15,7 @@ import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
 import Coming from './components/Coming'
+import MoonPoolComing from './components/MoonPoolComing'
 import CakeStats from './components/CakeStats'
 import PoolCard from './components/PoolCard'
 import PoolTabButtons from './components/PoolTabButtons'
@@ -96,9 +97,6 @@ const Farm: React.FC = () => {
         </div>
         <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
       </Hero>
-      <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        ** Please harvest your rewards before withdrawing STONKY from the pool**
-      </Heading>
       <br />
 
       <PoolTabButtons />
@@ -110,7 +108,8 @@ const Farm: React.FC = () => {
               <PoolCard key={pool.sousId} pool={pool} />
             ))}
           </>
-          
+          <Coming/>
+          <MoonPoolComing/>
         </Route>
         <Route path={`${path}/history`}>
           {orderBy(finishedPools, ['sortOrder']).map((pool) => (

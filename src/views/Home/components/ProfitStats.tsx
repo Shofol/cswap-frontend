@@ -27,17 +27,35 @@ const ProfitStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const block = useBlock()
-  const startBlock = 15184000 + (100000)
+  const startBlock = 15821780
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
     eggPerBlock = new BigNumber(farms[0].eggPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
+  // get total seconds between the times
+  let delta = (startBlock- block) * 2;
+
+  // calculate (and subtract) whole days
+    const days = Math.floor(delta / 86400);
+    delta -= days * 86400;
+
+  // calculate (and subtract) whole hours
+  const hours = Math.floor(delta / 3600) % 24;
+  delta -= hours * 3600;
+
+  // calculate (and subtract) whole minutes
+  const minutes = Math.floor(delta / 60) % 60;
+  delta -= minutes * 60;
+
+  // what's left is seconds
+  const seconds = delta % 60;
+
   return (
-    <Heading as="h2" color="secondary" mb="50px" size="xl" style={{ textAlign: 'center' }}>
-      Dividend Pool Begins in {Math.round(Math.max((startBlock- block) , 0))} Blocks ({Math.round(Math.max((startBlock- block) * 2 / 60 / 60, 0))} Hours)
-    </Heading>
+    <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
+    Farming Begins in {days} Days {hours} Hours {minutes} Minutes {seconds} Seconds
+  </Heading>
   )
 }
 

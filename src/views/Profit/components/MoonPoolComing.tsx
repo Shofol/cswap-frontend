@@ -31,25 +31,25 @@ const Footer = styled.div`
   border-top: 1px solid ${({ theme }) => (theme.isDark ? '#524B63' : '#E9EAEB')};
   padding: 24px;
 `
-const Coming: React.FC = () => {
+const MoonPoolComing: React.FC = () => {
   const TranslateString = useI18n()
 
   return (
     <Card>
       <div style={{ padding: '24px' }}>
-        <CardTitle>Matic Dividends</CardTitle>
-        <Image src="/images/tokens/matic.png" width={64} height={64} alt="Dividends" />
+        <CardTitle>Moon Pool</CardTitle>
+        <Image src="/images/tokens/STONKMOON.png" width={64} height={64} alt="Dividends" />
         <br />
-        <Label>Distributes fee income back to STONKY holders</Label>
+        <Label>Stake STONKY to get early access to STONKMOON</Label>
         <Button variant="subtle" fullWidth mb="16px">
-          <span style={{fontSize: 'x-large'}}>$10,000+</span> of Matic Dividends
+          <span style={{fontSize: 'large'}}>$10,000+</span> of STONKMOON
         </Button>
       </div>
       <Footer>
-      <div style={{ flex: 1 }}> Let us know what <b>DIVIDEND</b> you would like to see next!</div>
+      <div style={{ textAlign: 'center' }}> <b>Coming Soon</b></div>
       </Footer>
     </Card>
   )
 }
 
-export default Coming
+export default MoonPoolComing

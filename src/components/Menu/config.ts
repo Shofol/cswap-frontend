@@ -7,26 +7,17 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'Trade',
+    label: 'Buy StonkY',
     icon: 'TradeIcon',
-    items: [
-      {
-        label: 'Buy StonkY',
-        href: 'https://quickswap.exchange/#/swap?outputCurrency=0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
-      },
-      {
-        label: 'Liquidity',
-        href: 'https://quickswap.exchange/#/add/0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174/0x0d3EE5D8D395f7995cB7a7EDe924704b8266C5A1',
-      },
-    ],
+    href: 'https://quickswap.exchange/#/swap?outputCurrency=0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
   },
   {
-    label: 'Farms',
+    label: 'Stake Liquidity',
     icon: 'FarmIcon',
     href: '/farms',
   },
   {
-    label: 'Pools',
+    label: 'Stake Tokens',
     icon: 'PoolIcon',
     href: '/nests',
   },
@@ -36,8 +27,13 @@ const config: MenuEntry[] = [
   //   href: '/pools',
   // },
   {
-    label: 'Dividends',
+    label: 'Earn Dividends',
     icon: 'TicketIcon',
+    href: '/profit',
+  },
+  {
+    label: 'STONKMOON (Coming Soon)',
+    icon: 'SunIcon',
     href: '/profit',
   },
   // {
@@ -45,6 +41,11 @@ const config: MenuEntry[] = [
   //   icon: 'NftIcon',
   //   href: '/nft',
   // },
+  {
+    label: 'Road Map',
+    icon: 'RoadmapIcon',
+    href: 'https://gameswapfinance.gitbook.io/gameswap/roadmap',
+  },
   {
     label: 'Info',
     icon: 'InfoIcon',
@@ -63,21 +64,11 @@ const config: MenuEntry[] = [
       }
     ],
   },
-  {
-    label: 'Road Map',
-    icon: 'RoadmapIcon',
-    href: 'https://gameswapfinance.gitbook.io/gameswap/roadmap',
-  },
-  {
+  /* {
     label: 'Rug Doc Security Review',
     icon: 'AuditIcon',
     href: 'https://rugdoc.io/project/gameswap-stonkx/',
-  },
-  {
-     label: 'Old Stonk',
-     icon: 'NftIcon',
-     href: 'https://gameswap.netlify.app',
-   },
+  }, */
 ]
 
 export default config

@@ -52,7 +52,7 @@ const Home: React.FC = () => {
 
   return (
     <Page>
-      <Hero>
+      <Hero background-color="white">
         <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
         <ProfitStats />
       </Hero>
