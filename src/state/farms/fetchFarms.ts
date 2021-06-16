@@ -8,8 +8,8 @@ import { QuoteToken } from '../../config/constants/types'
 
 const CHAIN_ID = process.env.REACT_APP_CHAIN_ID
 
-const valueinBTC = async() => {
-  const farmConfig = farmsConfig.find(f=>f.tokenSymbol==="WBTC");
+const valueinBTC = async () => {
+  const farmConfig = farmsConfig.find(f => f.tokenSymbol === "WBTC");
   const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
   const calls = [
     // Balance of token in the LP contract
@@ -58,12 +58,12 @@ const valueinBTC = async() => {
 
   const tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(2))
 
-  return(tokenPriceVsQuote.toNumber())
+  return (tokenPriceVsQuote.toNumber())
 
 }
 
 const fetchFarms = async () => {
-  
+
   const data = await Promise.all(
     farmsConfig.map(async (farmConfig) => {
       const lpAdress = farmConfig.lpAddresses[CHAIN_ID]
@@ -115,23 +115,23 @@ const fetchFarms = async () => {
 
 
 
-    
+
       let tokenAmount
       let lpTotalInQuoteToken
       let tokenPriceVsQuote
 
 
-      
+
       if (farmConfig.isTokenOnly) {
         tokenAmount = new BigNumber(lpTokenBalanceMC).div(new BigNumber(10).pow(tokenDecimals))
         // if (farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
-          if((farmConfig.tokenSymbol === QuoteToken.STONKX || farmConfig.tokenSymbol === QuoteToken.WMATIC || farmConfig.tokenSymbol === QuoteToken.QUICK || farmConfig.tokenSymbol === QuoteToken.WETH || farmConfig.tokenSymbol === QuoteToken.FISH || farmConfig.tokenSymbol === QuoteToken.IRON || farmConfig.tokenSymbol === QuoteToken.POLYDOGE)&& farmConfig.quoteTokenSymbol === QuoteToken.BUSD)
-          {
-           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(12))
-         }
-         else if (farmConfig.tokenSymbol === QuoteToken.WBTC) {
+        if ((farmConfig.tokenSymbol === QuoteToken.STONKY || farmConfig.tokenSymbol === QuoteToken.WMATIC || farmConfig.tokenSymbol === QuoteToken.QUICK || farmConfig.tokenSymbol === QuoteToken.WETH || farmConfig.tokenSymbol === QuoteToken.FISH || farmConfig.tokenSymbol === QuoteToken.IRON || farmConfig.tokenSymbol === QuoteToken.POLYDOGE) && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
+          tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(12))
+          console.log(`${farmConfig.tokenSymbol} quoteTokenBalanceLP: ${quoteTokenBlanceLP} / tokenBalanceLP: ${tokenBalanceLP} = ${tokenPriceVsQuote}`)
+        }
+        else if (farmConfig.tokenSymbol === QuoteToken.WBTC) {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(2))
-         } 
+        }
         else {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP))
         }
@@ -148,8 +148,8 @@ const fetchFarms = async () => {
         // Amount of token in the LP that are considered staking (i.e amount of token * lp ratio)
         tokenAmount = new BigNumber(tokenBalanceLP).div(new BigNumber(10).pow(tokenDecimals)).times(lpTokenRatio)
         const quoteTokenAmount = new BigNumber(quoteTokenBlanceLP)
-           .div(new BigNumber(10).pow(quoteTokenDecimals))
-           .times(lpTokenRatio)
+          .div(new BigNumber(10).pow(quoteTokenDecimals))
+          .times(lpTokenRatio)
 
         if (tokenAmount.comparedTo(0) > 0) {
           tokenPriceVsQuote = quoteTokenAmount.div(tokenAmount)
@@ -160,7 +160,7 @@ const fetchFarms = async () => {
         // Total value in staking in quote token value
         lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
       }
-      
+
       const [info, totalAllocPoint, eggPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),

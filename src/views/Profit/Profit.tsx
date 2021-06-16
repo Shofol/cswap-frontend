@@ -89,7 +89,7 @@ const Farm: React.FC = () => {
             {TranslateString(282, 'Dividend Pool')}
           </Heading>
           <ul>
-            <li>Stake STONKX to revieve dividend payouts.</li>
+            <li>Stake STONKY to revieve dividend payouts.</li>
             <li>You can unstake at any time.</li>
             <li>Dividends are distributed linearly over the week.</li>
           </ul>
@@ -97,7 +97,7 @@ const Farm: React.FC = () => {
         <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
       </Hero>
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        ** Please harvest your rewards before withdrawing STONKX from the pool**
+        ** Please harvest your rewards before withdrawing STONKY from the pool**
       </Heading>
       <br />
 
