@@ -127,7 +127,7 @@ const fetchFarms = async () => {
         // if (farmConfig.tokenSymbol === QuoteToken.BUSD && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
         if ((farmConfig.tokenSymbol === QuoteToken.STONKY || farmConfig.tokenSymbol === QuoteToken.WMATIC || farmConfig.tokenSymbol === QuoteToken.QUICK || farmConfig.tokenSymbol === QuoteToken.WETH || farmConfig.tokenSymbol === QuoteToken.FISH || farmConfig.tokenSymbol === QuoteToken.IRON || farmConfig.tokenSymbol === QuoteToken.POLYDOGE) && farmConfig.quoteTokenSymbol === QuoteToken.BUSD) {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(12))
-          console.log(`${farmConfig.tokenSymbol} quoteTokenBalanceLP: ${quoteTokenBlanceLP} / tokenBalanceLP: ${tokenBalanceLP} = ${tokenPriceVsQuote}`)
+          // console.log(`${farmConfig.tokenSymbol} quoteTokenBalanceLP: ${quoteTokenBlanceLP} / tokenBalanceLP: ${tokenBalanceLP} = ${tokenPriceVsQuote}`)
         }
         else if (farmConfig.tokenSymbol === QuoteToken.WBTC) {
           tokenPriceVsQuote = new BigNumber(quoteTokenBlanceLP).div(new BigNumber(tokenBalanceLP)).times(new BigNumber(10).pow(2))
