@@ -51,6 +51,14 @@ const config: MenuEntry[] = [
     icon: 'InfoIcon',
     items: [
       {
+        label: 'StonkY Chart',
+        href: 'https://app.polychart.io/explorer/polygon/0x21401c19cbe557f1265401bda65bc523ce509db2'
+      },
+      {
+        label: 'StonkX Chart',
+        href: 'https://app.polychart.io/explorer/polygon/0xc293225ba90c545357761af2a09e71504275cee2'
+      },
+      {
         label: 'Github',
         href: 'https://github.com/gameswapfinance/',
       },
@@ -61,6 +69,20 @@ const config: MenuEntry[] = [
       {
         label: 'Medium',
         href: 'https://medium.com/@gameswapfinance',
+      }
+    ],
+  },
+  {
+    label: 'Previous Farms',
+    icon: 'FarmIcon',
+    items: [
+      {
+        label: 'STONK',
+        href: 'https://www.gameswapfinance.com',
+      },
+      {
+        label: 'STONKX',
+        href: 'https://stonk.farm',
       }
     ],
   },

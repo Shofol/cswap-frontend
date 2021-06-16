@@ -90,9 +90,9 @@ const Farm: React.FC = () => {
             {TranslateString(282, 'Dividend Pool')}
           </Heading>
           <ul>
-            <li>Stake STONKY to revieve dividend payouts.</li>
+            <li>Stake STONKY to earn dividend payouts.</li>
             <li>You can unstake at any time.</li>
-            <li>Dividends are distributed linearly over the week.</li>
+            <li>New dividend pools added every week.</li>
           </ul>
         </div>
         <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
