@@ -28,8 +28,8 @@ const CakeStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const eggPrice = usePriceCakeBusd()
-  const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
-  const cakeSupply = getBalanceNumber(circSupply)
+  const circSupply = totalSupply ? totalSupply.toNumber() - burnedBalance.toNumber() : new BigNumber(0)
+  const cakeSupply = getBalanceNumber(new BigNumber(circSupply))
   const marketCap = eggPrice.times(circSupply)
 
   let eggPerBlock = 0
@@ -53,7 +53,7 @@ const CakeStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(538, 'Total Burned')}</Text>
-          <CardValue fontSize="14px" value={getBalanceNumber(burnedBalance)} decimals={0} />
+          <CardValue fontSize="14px" value={burnedBalance.toNumber()} decimals={0}/>
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(10004, 'Circulating Supply')}</Text>
