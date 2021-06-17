@@ -54,7 +54,6 @@ const Home: React.FC = () => {
     <Page>
       <Hero background-color="white">
         <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
-        <ProfitStats />
       </Hero>
       <div>
         <Cards>
