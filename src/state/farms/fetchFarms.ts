@@ -158,7 +158,7 @@ const fetchFarms = async () => {
         }
 
         // Total value in staking in quote token value
-        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote)
+        lpTotalInQuoteToken = tokenAmount.times(tokenPriceVsQuote).times(2)
       }
 
       const [info, totalAllocPoint, eggPerBlock] = await multicall(masterchefABI, [

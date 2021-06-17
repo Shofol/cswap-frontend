@@ -57,8 +57,8 @@ const farms: FarmConfig[] = [
       56: '',
       137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
     },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
+    quoteTokenSymbol: QuoteToken.CAKE,
+    quoteTokenAdresses: contracts.cake,
   },
   // await CreatePool('0xd5069FbeCBE6b535341c45D57E609A02C80f13D6', 100, 4, 7200) // 3 Stonky-WETH 100 aloc, 4% fee, 2 hour harvest delay
   {
