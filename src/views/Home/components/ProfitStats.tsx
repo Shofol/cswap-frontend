@@ -54,7 +54,7 @@ const ProfitStats = () => {
 
   return (
     <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-    New STONKY farm starting at <a href='Https://stonky.farm'>HTTPS://STONKY.FARM</a> in {hours} Hours {minutes} Minutes!
+    New STONKY farm starting at <a href='Https://stonky.farm'>HTTPS://STONKY.FARM</a> in 0 Hours 0 Minutes!
   </Heading>
   )
 }
