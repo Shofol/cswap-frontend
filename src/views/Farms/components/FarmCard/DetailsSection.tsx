@@ -85,11 +85,14 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           {TranslateString(356, 'View on BscScan')}
         </Link>
       </Flex>
-      <Flex justifyContent="flex-start">
+      {lpLabel === 'SGAJ' && (
+        <Flex justifyContent="flex-start">
         <Link external href={sgajUrl} bold={false}>
           Buy SGAJ
         </Link>
       </Flex>
+      )}
+      
       
     </Wrapper>
   )
