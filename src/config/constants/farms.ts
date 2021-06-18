@@ -203,6 +203,90 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.busd,
     tokenDecimals: 18,
   }, 
+  // await CreatePool('0x8a953cfe442c5e8855cc6c61b1293fa648bae472', 50, 4, 25200) // Polydoge
+  {
+    pid: 10,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'POLYDOGE',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x7b3e67e63906d8576466c2f48158a30be0a9e36c', // Polydoge - USDC
+    },
+    tokenSymbol: 'POLYDOGE',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x8a953cfe442c5e8855cc6c61b1293fa648bae472', // Polydoge
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x831753dd7087cac61ab5644b308642cc1c33dc13', 50, 4, 25200); // Quick
+  {
+    pid: 11,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'QUICK',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x1f1e4c845183ef6d50e9609f16f6f9cae43bc9cb', // QUICK - USDC
+    },
+    tokenSymbol: 'QUICK',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x831753dd7087cac61ab5644b308642cc1c33dc13', // QUICK
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 50, 4, 25200); // Dai
+  {
+    pid: 12,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'DAI',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xf04adbf75cdfc5ed26eea4bbbb991db002036bdd', // DAI - USDC
+    },
+    tokenSymbol: 'DAI',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', // DAI
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x94c7d657f1c8be06a4dc009d2d475bb559d858cb', 50, 4, 25200); // SGaj
+  {
+    pid: 13,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'SGAJ',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x7116b32dab15c8f3806d39f9623fc56dcdf33d68', // SGAJ - USDC
+    },
+    tokenSymbol: 'SGAJ',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x94c7d657f1c8be06a4dc009d2d475bb559d858cb', // SGAJ
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
 ]
 
 export default farms
