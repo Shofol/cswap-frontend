@@ -73,6 +73,11 @@ const config: MenuEntry[] = [
     ],
   },
   {
+    label: 'Rug Doc Security Review',
+    icon: 'AuditIcon',
+    href: 'https://rugdoc.io/project/stonky-farm/',
+  }, 
+  {
     label: 'Previous Farms',
     icon: 'FarmIcon',
     items: [
@@ -86,11 +91,6 @@ const config: MenuEntry[] = [
       }
     ],
   },
-  /* {
-    label: 'Rug Doc Security Review',
-    icon: 'AuditIcon',
-    href: 'https://rugdoc.io/project/gameswap-stonkx/',
-  }, */
 ]
 
 export default config

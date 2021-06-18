@@ -37,6 +37,7 @@ const StyledLinkExternal = styled(LinkExternal)`
     fill: ${({ theme }) => theme.colors.primary};
   }
 `
+const sgajUrl = "https://app.sushi.com/swap?inputCurrency=0x2791bca1f2de4661ed88a30c99a7a9449aa84174&outputCurrency=0x94c7d657f1c8be06a4dc009d2d475bb559d858cb";
 
 const DetailsSection: React.FC<ExpandableSectionProps> = ({
   isTokenOnly,
@@ -84,6 +85,12 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
           {TranslateString(356, 'View on BscScan')}
         </Link>
       </Flex>
+      <Flex justifyContent="flex-start">
+        <Link external href={sgajUrl} bold={false}>
+          Buy SGAJ
+        </Link>
+      </Flex>
+      
     </Wrapper>
   )
 }
