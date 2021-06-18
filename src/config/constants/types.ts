@@ -34,6 +34,8 @@ export enum QuoteToken {
   'FISH' = 'Fish',
   'IRON' = 'Iron',
   'POLYDOGE' = 'PolyDoge',
+  'DAI' = 'DAI',
+  'SGAJ' = 'SGAJ'
 }
 
 export enum PoolCategory {
