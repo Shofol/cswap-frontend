@@ -1,23 +1,25 @@
 import { PoolConfig, QuoteToken, PoolCategory } from './types'
 
 const pools: PoolConfig[] = [
-  // {
-  //   sousId: 1,
-  //   tokenName: 'TWT',
-  //   stakingTokenName: QuoteToken.SYRUP,
-  //   stakingTokenAddress: '0x009cF7bC57584b7998236eff51b98A168DceA9B0',
-  //   contractAddress: {
-  //     97: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
-  //     56: '0xAfd61Dc94f11A70Ae110dC0E0F2061Af5633061A',
-  //   },
-  //   poolCategory: PoolCategory.CORE,
-  //   projectLink: 'https://trustwallet.com/',
-  //   harvest: true,
-  //   tokenPerBlock: '20',
-  //   sortOrder: 999,
-  //   isFinished: true,
-  //   tokenDecimals: 18,
-  // },
+  {
+    sousId: 2,
+    tokenName: 'WMATIC',
+    stakingTokenName: QuoteToken.STONKY,
+    stakingTokenAddress: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
+    contractAddress: {
+      97: '',
+      56: '',
+     137: '0x65B97c51634d49e57B7893E3142f02eB51d8125B'
+    },
+    poolCategory: PoolCategory.COMMUNITY,
+    projectLink: 'https://stonky.farm/',
+    harvest: true,
+    tokenPerBlock: '.02892',
+    sortOrder: 1,
+    isFinished: false,
+    tokenDecimals: 18,
+    message: '3 Day 3,570 MATIC Pool'
+  },
 ]
 
 export default pools
