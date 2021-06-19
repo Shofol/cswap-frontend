@@ -65,6 +65,10 @@ const Farm: React.FC = () => {
     {
       totalRewardPricePerYear = new BigNumber( 2150 * .5 / 7 * 365) 
     }
+    else if (pool.sousId === 4)
+    {
+      totalRewardPricePerYear = new BigNumber(530 * 1.4 / 3 * 365);
+    }
     
     
 

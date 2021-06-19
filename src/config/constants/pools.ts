@@ -54,6 +54,24 @@ const pools: PoolConfig[] = [
     sortOrder: 2,
     isFinished: false,
     tokenDecimals: 18,
+  }, // 0x8019fF91B55fE0c64E3d0B22F1FBC7Dfd1BAc8A5
+  {
+    sousId: 3,
+    tokenName: 'WMATIC',
+    stakingTokenName: QuoteToken.STONKX,
+    stakingTokenAddress: '0x4BEcDD1704e16962053792fd0d6Baa533Daaa702',
+    contractAddress: {
+      97: '',
+      56: '',
+     137: '0x8019fF91B55fE0c64E3d0B22F1FBC7Dfd1BAc8A5'
+    },
+    poolCategory: PoolCategory.COMMUNITY,
+    projectLink: 'https://stonk.farm/',
+    harvest: true,
+    tokenPerBlock: '.004294',
+    sortOrder: 2,
+    isFinished: false,
+    tokenDecimals: 18,
   },
   // {
   //   sousId: 1,
