@@ -54,16 +54,16 @@ const Farm: React.FC = () => {
       rewardTokenFarm?.quoteTokenSymbol,
     )
     let totalRewardPricePerYear = new BigNumber(0);
-    if(pool.sousId === 1)
+    if(pool.sousId === 2)
     {
-      totalRewardPricePerYear = new BigNumber( 3570 * 1.4 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+      totalRewardPricePerYear = new BigNumber( 3570 * 1.3 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     }
     
     
 
     const totalStakingTokenInPool = stakingTokenPriceInBNB.times(getBalanceNumber(pool.totalStaked))
     const apy =  totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
-    
+    console.log(`${pool.sousId} ${totalRewardPricePerYear.toNumber()} / ${totalStakingTokenInPool.toNumber()} * 100`);
     
     return {
       ...pool,
