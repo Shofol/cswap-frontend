@@ -59,7 +59,7 @@ const Farm: React.FC = () => {
       totalRewardPricePerYear = new BigNumber( 3570 * 1.3 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     }
     else if (pool.sousId === 3){
-      totalRewardPricePerYear = new BigNumber( 50 * 66 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+      totalRewardPricePerYear = new BigNumber( 50 * 150 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
     }
     
     
