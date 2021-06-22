@@ -7,7 +7,7 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'Buy StonkY',
+    label: 'Buy StonkZ',
     icon: 'TradeIcon',
     href: 'https://quickswap.exchange/#/swap?outputCurrency=0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257',
   },
@@ -51,7 +51,7 @@ const config: MenuEntry[] = [
     icon: 'InfoIcon',
     items: [
       {
-        label: 'StonkY Chart',
+        label: 'StonkZ Chart',
         href: 'https://app.polychart.io/explorer/polygon/0x21401c19cbe557f1265401bda65bc523ce509db2'
       },
       {
@@ -77,20 +77,6 @@ const config: MenuEntry[] = [
     icon: 'AuditIcon',
     href: 'https://rugdoc.io/project/stonky-farm/',
   }, 
-  {
-    label: 'Previous Farms',
-    icon: 'FarmIcon',
-    items: [
-      {
-        label: 'STONK',
-        href: 'https://www.gameswapfinance.com',
-      },
-      {
-        label: 'STONKX',
-        href: 'https://stonk.farm',
-      }
-    ],
-  },
 ]
 
 export default config

@@ -100,6 +100,7 @@ const Farm: React.FC = () => {
               <PoolCard key={pool.sousId} pool={pool} />
             ))}
           </>
+          <Coming/>
           <MoonPoolComing/>
         </Route>
         <Route path={`${path}/history`}>
