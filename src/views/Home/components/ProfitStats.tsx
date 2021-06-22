@@ -27,7 +27,7 @@ const ProfitStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const block = useBlock()
-  const startBlock = 15910000
+  const startBlock = 16150000
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -54,7 +54,7 @@ const ProfitStats = () => {
 
   return (
     <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-    Dividend Pool Begins in {days} Days {hours} Hours {minutes} Minutes {seconds} Seconds
+    <a href='Https://stonkZ.farm'>StonkZ.Farm</a> site goes live in {days} Days {hours} Hours {minutes} Minutes {seconds} Seconds
   </Heading>
   )
 }
