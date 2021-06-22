@@ -82,7 +82,7 @@ const Farm: React.FC = () => {
             {TranslateString(282, 'Dividend Pool')}
           </Heading>
           <ul>
-            <li>Stake STONKY to earn dividend payouts.</li>
+            <li>Stake STONKZ to earn dividend payouts.</li>
             <li>You can unstake at any time.</li>
             <li>New dividend pools added every week.</li>
           </ul>

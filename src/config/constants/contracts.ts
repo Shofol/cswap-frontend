@@ -2,12 +2,12 @@ export default {
   cake: {
     56: '',
     97: '',
-    137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
+    137: '0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257', // STONKZ
   },
   masterChef: {
     56: '',
     97: '',
-    137: '0x4aE6c480F0d71811ECFc38eDa98Bed429548520A' 
+    137: '0xd43439a5C9d0C5BC305dEFdf318dC56d9bE7F448' 
   },
   sousMasterChef: {
     56: '',

@@ -2,18 +2,286 @@ import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
 const farms: FarmConfig[] = [
+  // await CreatePool('0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257', 1000, 1.5, 0) // 0 StonkZ token 
+  {
+    pid: 0,
+    risk: 5,
+    isTokenOnly: true,
+    lpSymbol: 'STONKZ',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x0652cf35852e8b56cda90e5da23ad32995b4fe96', // STONKZ - USDC
+    },
+    tokenSymbol: 'STONKZ',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  // await CreatePool('0x0652cf35852e8b56cda90e5da23ad32995b4fe96', 1000, 0, 0) // 1 StonkZ-USDC 
+  {
+    pid: 1,
+    risk: 3,
+    lpSymbol: 'STONKZ-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x0652cf35852e8b56cda90e5da23ad32995b4fe96', // STONKZ - USDC
+    },
+    tokenSymbol: 'STONKZ',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257', // STONKZ
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  },
+  // await CreatePool('0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 50, 4, 0); // USDT 25% aloc, 4% fee, 14 hour harvest delay
+  {
+    pid: 2,
+    isTokenOnly: true,
+    risk: 2,
+    lpSymbol: 'USDT',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x2cf7252e74036d1da831d11089d326296e64a728', // USDT - USDC
+    },
+    tokenSymbol: 'USDT',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', // USDT
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 50, 4, 0); // USDC  25% aloc, 4% fee, 14 hour harvest delay
+  {
+    pid: 3,
+    isTokenOnly: true,
+    risk: 2,
+    lpSymbol: 'USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x2cf7252e74036d1da831d11089d326296e64a728', // USDC - USDC
+    },
+    tokenSymbol: 'USDC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', // USDC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', 50, 4, 0); // Wmatic 25% aloc, 4% fee, 14 hour harvest delay
+  {
+    pid: 4,
+    isTokenOnly: true,
+    risk: 1,
+    lpSymbol: 'WMATIC',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827', // WMATIC - USDC
+    },
+    tokenSymbol: 'WMATIC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // WMATIC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6', 50, 4, 0); // WBTC 25% aloc, 4% fee, 14 hour harvest delay
+  {
+    pid: 5,
+    isTokenOnly: true,
+    risk: 2,
+    lpSymbol: 'WBTC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xf6a637525402643b0654a54bead2cb9a83c8b498', // WBTC - USDC
+    },
+    tokenSymbol: 'WBTC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6', // WBTC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0x7ceb23fd6bc0add59e62ac25578270cff1b9f619', 50, 4, 0); // WETH 25% aloc, 4% fee, 14 hour harvest delay
+  {
+    pid: 6,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'WETH',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x853ee4b2a13f8a742d64c8f088be7ba2131f670d', // ETH - USDC
+    },
+    tokenSymbol: 'WETH',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619', // ETH
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x8a953cfe442c5e8855cc6c61b1293fa648bae472', 50, 4, 0) // Polydoge
+  {
+    pid: 7,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'POLYDOGE',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x7b3e67e63906d8576466c2f48158a30be0a9e36c', // Polydoge - USDC
+    },
+    tokenSymbol: 'PolyDoge',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x8a953cfe442c5e8855cc6c61b1293fa648bae472', // Polydoge
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x831753dd7087cac61ab5644b308642cc1c33dc13', 50, 4, 0); // Quick
+  {
+    pid: 8,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'QUICK',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x1f1e4c845183ef6d50e9609f16f6f9cae43bc9cb', // QUICK - USDC
+    },
+    tokenSymbol: 'QUICK',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x831753dd7087cac61ab5644b308642cc1c33dc13', // QUICK
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 50, 4, 0); // Dai
+  {
+    pid: 9,
+    isTokenOnly: true,
+    risk: 3,
+    lpSymbol: 'DAI',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xf04adbf75cdfc5ed26eea4bbbb991db002036bdd', // DAI - USDC
+    },
+    tokenSymbol: 'DAI',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', // DAI
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  }, 
+  // await CreatePool('0x2cf7252e74036d1da831d11089d326296e64a728',50,4, 0); // USDC USDT
+  {
+    pid: 10,
+    risk: 2,
+    lpSymbol: 'USDT-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0x2cf7252e74036d1da831d11089d326296e64a728', // USDT - USDC
+    },
+    tokenSymbol: 'USDT',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', // USDT
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0xf6a637525402643b0654a54bead2cb9a83c8b498',50,4, 0); // WBTC USDC
+  {
+    pid: 11,
+    risk: 2,
+    lpSymbol: 'WBTC-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',
+      137: '0xf6a637525402643b0654a54bead2cb9a83c8b498', // WBTC - USDC
+    },
+    tokenSymbol: 'WBTC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6', // WBTC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  // await CreatePool('0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827',50,4, 0); // Wmatic USDC
+  {
+    pid: 12,
+    risk: 1,
+    lpSymbol: 'WMATIC-USDC',
+    lpAddresses: {
+      97: '',
+      56: '',  
+      137: '0x6e7a5fafcec6bb1e78bae2a1f0b612012bf14827', // WMATIC - USDC
+    },
+    tokenSymbol: 'WMATIC',
+    tokenAddresses: {
+      97: '',
+      56: '',
+      137: '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', // WMATIC
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    tokenDecimals: 18,
+  },
+  /*
   // await CreatePool('0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', 50, 0, 7200) // 0 Stonky token 50 aloc, no fee, 2 hour harvest delay
   {
     pid: 0,
     risk: 5,
     isTokenOnly: true,
-    lpSymbol: 'STONKY',
+    lpSymbol: 'STONKZ',
     lpAddresses: {
       97: '',
       56: '',
-      137: '0x656DD8094106805888dc3E7b4E3fb9061D0DC001', // STONKY - USDC
+      137: '0x656DD8094106805888dc3E7b4E3fb9061D0DC001', // STONKZ - USDC
     },
-    tokenSymbol: 'STONKY',
+    tokenSymbol: 'STONKZ',
     tokenAddresses: {
       97: '',
       56: '',
@@ -26,17 +294,17 @@ const farms: FarmConfig[] = [
   {
     pid: 1,
     risk: 3,
-    lpSymbol: 'STONKY-USDC',
+    lpSymbol: 'STONKZ-USDC',
     lpAddresses: {
       97: '',
       56: '',
       137: '0x656DD8094106805888dc3E7b4E3fb9061D0DC001', // Stonky - USDC
     },
-    tokenSymbol: 'STONKY',
+    tokenSymbol: 'STONKZ',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
+      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKZ
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -45,17 +313,17 @@ const farms: FarmConfig[] = [
   {
     pid: 2,
     risk: 3,
-    lpSymbol: 'STONKY-WMATIC',
+    lpSymbol: 'STONKZ-WMATIC',
     lpAddresses: {
       97: '',
       56: '',
       137: '0x21401C19cBE557f1265401BDA65bC523CE509db2', // Stonky - WMATIC
     },
-    tokenSymbol: 'STONKY',
+    tokenSymbol: 'STONKZ',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
+      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKZ
     },
     quoteTokenSymbol: QuoteToken.CAKE,
     quoteTokenAdresses: contracts.cake,
@@ -64,17 +332,17 @@ const farms: FarmConfig[] = [
   {
     pid: 3,
     risk: 3,
-    lpSymbol: 'STONKY-WETH',
+    lpSymbol: 'STONKZ-WETH',
     lpAddresses: {
       97: '',
       56: '',
       137: '0xd5069FbeCBE6b535341c45D57E609A02C80f13D6', // Stonky - WETH
     },
-    tokenSymbol: 'STONKY',
+    tokenSymbol: 'STONKZ',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
+      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKZ
     },
     quoteTokenSymbol: QuoteToken.CAKE,
     quoteTokenAdresses: contracts.cake,
@@ -83,17 +351,17 @@ const farms: FarmConfig[] = [
   {
     pid: 4,
     risk: 3,
-    lpSymbol: 'STONKY-WBTC',
+    lpSymbol: 'STONKZ-WBTC',
     lpAddresses: {
       97: '',
       56: '',
       137: '0x797eF3827Ef8bAA7B72b596E126FD1b31003055C', // WMATIC - USDC
     },
-    tokenSymbol: 'STONKY',
+    tokenSymbol: 'STONKZ',
     tokenAddresses: {
       97: '',
       56: '',
-      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKY
+      137: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c', // STONKZ
     },
     quoteTokenSymbol: QuoteToken.CAKE,
     quoteTokenAdresses: contracts.cake,
@@ -286,7 +554,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     tokenDecimals: 18,
-  }, 
+  }, */
 ]
 
 export default farms

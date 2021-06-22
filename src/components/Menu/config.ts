@@ -9,7 +9,7 @@ const config: MenuEntry[] = [
   {
     label: 'Buy StonkY',
     icon: 'TradeIcon',
-    href: 'https://quickswap.exchange/#/swap?outputCurrency=0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
+    href: 'https://quickswap.exchange/#/swap?outputCurrency=0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257',
   },
   {
     label: 'Stake Liquidity',

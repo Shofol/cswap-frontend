@@ -25,7 +25,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
-      priceLink="https://polygonscan.com/token/0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c"
+      priceLink="https://polygonscan.com/token/0x1F1b5ce5fEDb6F27Db51C4d5e885d952f8371257"
       {...props}
     />
   )
