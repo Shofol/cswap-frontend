@@ -52,11 +52,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'StonkZ Chart',
-        href: 'https://app.polychart.io/explorer/polygon/0x21401c19cbe557f1265401bda65bc523ce509db2'
-      },
-      {
-        label: 'StonkX Chart',
-        href: 'https://app.polychart.io/explorer/polygon/0xc293225ba90c545357761af2a09e71504275cee2'
+        href: 'https://app.polychart.io/explorer/polygon/0x0652CF35852e8B56cda90e5Da23ad32995B4FE96'
       },
       {
         label: 'Github',
