@@ -20,7 +20,6 @@ const pools: PoolConfig[] = [
     tokenDecimals: 18,
     message: '3 Day 3,570 MATIC Pool'
   },
-  // truffle migrate --network polygon -f 4 
   {
     sousId: 3,
     tokenName: 'StonkZ',
@@ -40,6 +39,26 @@ const pools: PoolConfig[] = [
     tokenDecimals: 18,
     message: '3 Day StonkZ Pool'
   },
+  {
+    sousId: 4,
+    tokenName: 'WMATIC',
+    stakingTokenName: QuoteToken.STONKY,
+    stakingTokenAddress: '0xcac723F6C79Ce761E04682009Fa87c39Ba05b75c',
+    contractAddress: {
+      97: '',
+      56: '',
+     137: '0xe1737BEa26035984404Eb9cc26f0246d17DD2E45'
+    },
+    poolCategory: PoolCategory.COMMUNITY,
+    projectLink: 'https://stonky.farm/',
+    harvest: true,
+    tokenPerBlock: '.00241935',
+    sortOrder: 1,
+    isFinished: false,
+    tokenDecimals: 18,
+    message: '3 Day 300 WMATIC Pool'
+  },
+  // 0xe1737BEa26035984404Eb9cc26f0246d17DD2E45
 ]
 
 export default pools

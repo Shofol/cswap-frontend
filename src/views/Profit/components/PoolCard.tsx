@@ -238,6 +238,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </StyledDetails>
         <StyledDetails>
+          <div style={{ flex: 1 }}>APR Per Day:</div>
+          {isFinished || isOldSyrup || !apy || apy?.isNaN() || !apy?.isFinite() ? (
+            '-'
+          ) : (
+            <Balance fontSize="14px" isDisabled={isFinished} value={apy?.toNumber()/365} decimals={2} unit="%" />
+          )}
+        </StyledDetails>
+        <StyledDetails>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label={stakingTokenName}>
             <div style={{ flex: 1 }}>
