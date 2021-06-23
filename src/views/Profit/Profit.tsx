@@ -10,7 +10,7 @@ import partition from 'lodash/partition'
 import useI18n from 'hooks/useI18n'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { useFarms, usePriceBnbBusd, usePools, usePoolFromPid } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePools, usePoolFromPid } from 'state/hooks'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -54,9 +54,20 @@ const Farm: React.FC = () => {
       rewardTokenFarm?.quoteTokenSymbol,
     )
     let totalRewardPricePerYear = new BigNumber(0);
+
+    const totalBlocks = pool.endBlock - pool.startBlock;
+    const totalBlocksPerYear = 365 * 24 * 60 * 60 / 2.1;
+    const tokensPerYear = totalBlocksPerYear * parseFloat(pool.tokenPerBlock);
+
     if(pool.sousId === 2)
     {
       totalRewardPricePerYear = new BigNumber( 3570 * 1.3 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+    }
+    else if (pool.sousId === 3){
+      totalRewardPricePerYear = new BigNumber( 50 * 200 / 3 * 365) // @HACK hard code value for now rewardTokenPriceInBNB.times(pool.tokenPerBlock).times(BLOCKS_PER_YEAR)
+    }
+    else{ // works for WMATIC
+      totalRewardPricePerYear = new BigNumber(tokensPerYear).multipliedBy(bnbPriceUSD);
     }
     
     
@@ -82,7 +93,7 @@ const Farm: React.FC = () => {
             {TranslateString(282, 'Dividend Pool')}
           </Heading>
           <ul>
-            <li>Stake STONKZ to earn dividend payouts.</li>
+            <li>Stake STONKY to earn dividend payouts.</li>
             <li>You can unstake at any time.</li>
             <li>New dividend pools added every week.</li>
           </ul>
@@ -100,7 +111,6 @@ const Farm: React.FC = () => {
               <PoolCard key={pool.sousId} pool={pool} />
             ))}
           </>
-          <Coming/>
           <MoonPoolComing/>
         </Route>
         <Route path={`${path}/history`}>
