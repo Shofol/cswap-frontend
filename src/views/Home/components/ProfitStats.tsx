@@ -35,7 +35,7 @@ const ProfitStats = () => {
   }
 
   // get total seconds between the times
-  let delta = (startBlock- block) * 2;
+  let delta = (startBlock- block) * 2.2;
 
   // calculate (and subtract) whole days
     const days = Math.floor(delta / 86400);

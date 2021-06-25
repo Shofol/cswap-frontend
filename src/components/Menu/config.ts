@@ -71,7 +71,7 @@ const config: MenuEntry[] = [
   {
     label: 'Rug Doc Security Review',
     icon: 'AuditIcon',
-    href: 'https://rugdoc.io/project/stonky-farm/',
+    href: 'https://rugdoc.io/project/stonkz-gameswap/',
   }, 
 ]
 
