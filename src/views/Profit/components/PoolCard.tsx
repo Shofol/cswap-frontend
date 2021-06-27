@@ -250,7 +250,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             <span role="img" aria-label={stakingTokenName}>
             <div style={{ flex: 1 }}>
               {TranslateString(384, 'Your Stake')}:
-              <Image src={`/images/tokens/${stakingTokenName}.png`} width={20} height={20} alt="StonkY" />{' '}
+              <Image src={`/images/tokens/${stakingTokenName}.png`} width={20} height={20} alt="StonkZ" />{' '}
               
             </div>
             
