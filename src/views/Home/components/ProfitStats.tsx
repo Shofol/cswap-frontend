@@ -27,7 +27,7 @@ const ProfitStats = () => {
   const burnedBalance = useBurnedBalance(getCakeAddress())
   const farms = useFarms()
   const block = useBlock()
-  const startBlock = 16230000
+  const startBlock = 16498800
 
   let eggPerBlock = 0
   if (farms && farms[0] && farms[0].eggPerBlock) {
@@ -52,9 +52,17 @@ const ProfitStats = () => {
   // what's left is seconds
   const seconds = Math.round(delta % 60);
 
+  let message = ""
+  if (block < startBlock){
+    message = `Next Dividend Pool Begins in ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+  }
+  else if (block < startBlock + (12 * 60 * 60 / 2.25)){
+    message = "Dividend Pool is LIVE!";
+  }
+ 
   return (
     <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-    Dividend Pool Begins in {days} Days {hours} Hours {minutes} Minutes {seconds} Seconds
+    {message}
   </Heading>
   )
 }
