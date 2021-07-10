@@ -75,7 +75,7 @@
     {
       "data": {
         "stringId": 304,
-        "text": "Total Stonk burned since launch"
+        "text": "Total CSWAP burned since launch"
       }
     },
     {
@@ -123,13 +123,13 @@
     {
       "data": {
         "stringId": 320,
-        "text": "Stake LP tokens to earn Stonk"
+        "text": "Stake LP tokens to earn CSWAP"
       }
     },
     {
       "data": {
         "stringId": 322,
-        "text": "Stake Stonk, get SYRUP."
+        "text": "Stake CSWAP, get SYRUP."
       }
     },
     {
@@ -153,7 +153,7 @@
     {
       "data": {
         "stringId": 334,
-        "text": "Every time you stake and unstake Stonk tokens, the contract will automatically harvest Stonk rewards for you!"
+        "text": "Every time you stake and unstake CSWAP tokens, the contract will automatically harvest CSWAP rewards for you!"
       }
     },
     {
@@ -219,7 +219,7 @@
     {
       "data": {
         "stringId": 358,
-        "text": "Stonk price"
+        "text": "CSWAP price"
       }
     },
     {
@@ -243,7 +243,7 @@
     {
       "data": {
         "stringId": 380,
-        "text": "1 Stonk = 1 SYRUP"
+        "text": "1 CSWAP = 1 SYRUP"
       }
     },
     {
@@ -291,7 +291,7 @@
     {
       "data": {
         "stringId": 400,
-        "text": "SYRUP holders proportionally split 25% of Stonk block emissions each day (10 Stonk per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 25% of CSWAP block emissions each day (10 CSWAP per block), Rewards are distributed each block."
       }
     },
     {
@@ -357,13 +357,13 @@
     {
       "data": {
         "stringId": 424,
-        "text": "%num% Stonk"
+        "text": "%num% CSWAP"
       }
     },
     {
       "data": {
         "stringId": 426,
-        "text": "Spend Stonk to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
+        "text": "Spend CSWAP to buy tickets, contributing to the lottery pot. Ticket purchases end approx. 30 minutes before lottery. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their positions! Good luck!"
       }
     },
     {
@@ -441,19 +441,19 @@
     {
       "data": {
         "stringId": 454,
-        "text": "%num% Stonk Available"
+        "text": "%num% CSWAP Available"
       }
     },
     {
       "data": {
         "stringId": 456,
-        "text": "Your amount must be a multiple of 10 Stonk"
+        "text": "Your amount must be a multiple of 10 CSWAP"
       }
     },
     {
       "data": {
         "stringId": 458,
-        "text": "1 Ticket = 10 Stonk"
+        "text": "1 Ticket = 10 CSWAP"
       }
     },
     {
@@ -501,7 +501,7 @@
     {
       "data": {
         "stringId": 478,
-        "text": "Ticket purchases are final. Your Stonk cannot be returned to you after buying tickets."
+        "text": "Ticket purchases are final. Your CSWAP cannot be returned to you after buying tickets."
       }
     },
     {
@@ -513,7 +513,7 @@
     {
       "data": {
         "stringId": 482,
-        "text": "Stonk prizes to be claimed"
+        "text": "CSWAP prizes to be claimed"
       }
     },
     {
@@ -549,13 +549,13 @@
     {
       "data": {
         "stringId": 494,
-        "text": "Approve Stonk"
+        "text": "Approve CSWAP"
       }
     },
     {
       "data": {
         "stringId": 496,
-        "text": "SYRUP holders proportionally split 40% of Stonk block emissions each day (10 Stonk per block), Rewards are distributed each block."
+        "text": "SYRUP holders proportionally split 40% of CSWAP block emissions each day (10 CSWAP per block), Rewards are distributed each block."
       }
     },
     {
@@ -573,19 +573,19 @@
     {
       "data": {
         "stringId": 504,
-        "text": "You\u2019ll pay for the new tokens using Stonk-BNB LP tokens, which means you need to stake equal amounts of Stonk and BNB in a liquidity pool to take part."
+        "text": "You\u2019ll pay for the new tokens using CSWAP-BNB LP tokens, which means you need to stake equal amounts of CSWAP and BNB in a liquidity pool to take part."
       }
     },
     {
       "data": {
         "stringId": 506,
-        "text": "Get Stonk-BNB LP >"
+        "text": "Get CSWAP-BNB LP >"
       }
     },
     {
       "data": {
         "stringId": 508,
-        "text": "The project gets the BNB, Goose Finance burns the Stonk."
+        "text": "The project gets the BNB, CryptoSwap Finance burns the CSWAP."
       }
     },
     {
@@ -603,7 +603,7 @@
     {
       "data": {
         "stringId": 514,
-        "text": "Launch your project with Goose Finance, Binance Smart Chain\u2019s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC."
+        "text": "Launch your project with CryptoSwap Finance, Binance Smart Chain\u2019s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC."
       }
     },
     {
@@ -651,7 +651,7 @@
     {
       "data": {
         "stringId": 534,
-        "text": "Stonk Stats"
+        "text": "CSWAP Stats"
       }
     },
     {
@@ -669,31 +669,31 @@
     {
       "data": {
         "stringId": 540,
-        "text": "New Stonk\/block"
+        "text": "New CSWAP\/block"
       }
     },
     {
       "data": {
         "stringId": 542,
-        "text": "Farms & Staking"
+        "text": "My assets"
       }
     },
     {
       "data": {
         "stringId": 544,
-        "text": "Stonk to Harvest"
+        "text": "CSWAP to Harvest"
       }
     },
     {
       "data": {
         "stringId": 546,
-        "text": "Stonk in Wallet"
+        "text": "CSWAP in Wallet"
       }
     },
     {
       "data": {
         "stringId": 548,
-        "text": "Collecting Stonk"
+        "text": "Collecting CSWAP"
       }
     },
     {
@@ -705,7 +705,7 @@
     {
       "data": {
         "stringId": 552,
-        "text": "Stonk to Collect"
+        "text": "CSWAP to Collect"
       }
     },
     {
@@ -771,7 +771,7 @@
     {
       "data": {
         "stringId": 580,
-        "text": "Stake Stonks to earn new tokens."
+        "text": "Stake CSWAPs to earn new tokens."
       }
     },
     {
@@ -789,7 +789,7 @@
     {
       "data": {
         "stringId": 586,
-        "text": "Stonk to burn (USD)"
+        "text": "CSWAP to burn (USD)"
       }
     },
     {
@@ -801,7 +801,7 @@
     {
       "data": {
         "stringId": 590,
-        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest Stonk rewards for you!"
+        "text": "\u2b50\ufe0f Every time you stake and unstake LP tokens, the contract will automatically harvest CSWAP rewards for you!"
       }
     },
     {
@@ -819,13 +819,13 @@
     {
       "data": {
         "stringId": 596,
-        "text": "Buy Stonk and BNB tokens"
+        "text": "Buy CSWAP and BNB tokens"
       }
     },
     {
       "data": {
         "stringId": 598,
-        "text": "Get Stonk-BNB LP tokens by adding Stonk and BNB liquidity"
+        "text": "Get CSWAP-BNB LP tokens by adding CSWAP and BNB liquidity"
       }
     },
     {
@@ -837,7 +837,7 @@
     {
       "data": {
         "stringId": 602,
-        "text": "While the sale is live, commit your Stonk-LP tokens to buy the IFO tokens"
+        "text": "While the sale is live, commit your CSWAP-LP tokens to buy the IFO tokens"
       }
     },
     {
@@ -873,7 +873,7 @@
     {
       "data": {
         "stringId": 614,
-        "text": "Trade in for Stonk, or keep for your collection!"
+        "text": "Trade in for CSWAP, or keep for your collection!"
       }
     },
     {
@@ -915,7 +915,7 @@
     {
       "data": {
         "stringId": 628,
-        "text": "When you trade in this NFT to receive Stonk, you will lose access to it forever!"
+        "text": "When you trade in this NFT to receive CSWAP, you will lose access to it forever!"
       }
     },
     {
@@ -945,7 +945,7 @@
     {
       "data": {
         "stringId": 638,
-        "text": "Winners can trade in their NFTs for a Stonk value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
+        "text": "Winners can trade in their NFTs for a CSWAP value until the expiry date written below. If you don't trade in your NFT by then, don\u2019t worry: you\u2019ll still keep it in your wallet!"
       }
     },
     {
@@ -987,7 +987,7 @@
     {
       "data": {
         "stringId": 654,
-        "text": "Trade in for Stonk"
+        "text": "Trade in for CSWAP"
       }
     },
     {
@@ -1113,7 +1113,7 @@
     {
       "data": {
         "stringId": 696,
-        "text": "Stake LP tokens to earn Stonk"
+        "text": "Stake LP tokens to earn CSWAP"
       }
     },
     {
@@ -1155,13 +1155,13 @@
     {
       "data": {
         "stringId": 708,
-        "text": "The Stonk Lottery"
+        "text": "The CSWAP Lottery"
       }
     },
     {
       "data": {
         "stringId": 710,
-        "text": "Buy tickets with Stonk"
+        "text": "Buy tickets with CSWAP"
       }
     },
     {
@@ -1227,13 +1227,13 @@
     {
       "data": {
         "stringId": 10002,
-        "text": "Stake tokens to earn Stonk"
+        "text": "Stake tokens to earn CSWAP"
       }
     },
     {
       "data": {
         "stringId": 10003,
-        "text": "Announcements"
+        "text": "Newsletter"
       }
     },
     {

@@ -3,9 +3,11 @@ import { Card, CardBody, Heading, Text } from '@gameswapfinance/uikit'
 import BigNumber from 'bignumber.js/bignumber'
 import styled from 'styled-components'
 import { Timeline } from 'react-twitter-widgets'
-import { getBalanceNumber } from 'utils/formatBalance'
+// eslint-disable-next-line import/no-unresolved
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
+// eslint-disable-next-line import/no-unresolved
 import useI18n from 'hooks/useI18n'
+// eslint-disable-next-line import/no-unresolved
 import { getCakeAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 import { useFarms } from '../../../state/hooks'
@@ -30,12 +32,12 @@ const TwitterCard = () => {
     <StyledTwitterCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(10003, 'Announcements')}
+          {TranslateString(10003, 'Newsletter')}
         </Heading>
         <Timeline
           dataSource={{
             sourceType: 'profile',
-            screenName: 'FinanceSwap',
+            screenName: 'elonmusk',
           }}
           options={{
             height: '300',

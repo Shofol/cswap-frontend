@@ -37,10 +37,10 @@ const Coming: React.FC = () => {
   return (
     <Card>
       <div style={{ padding: '24px' }}>
-        <CardTitle>STONK Dividends</CardTitle>
+        <CardTitle>CSWAP Dividends</CardTitle>
         <Image src="/images/egg/9.png" width={64} height={64} alt="Dividends" />
         <br />
-        <Label>Distributes fee income back to STONK holders</Label>
+        <Label>Distributes fee income back to CSWAP holders</Label>
         <Button variant="secondary" fullWidth mb="16px">
           <span style={{fontSize: 'x-large'}}>$10,000</span> of Matic Dividends
         </Button>

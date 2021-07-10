@@ -51,15 +51,15 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/gameswapfinance/',
+        href: 'https://github.com/cswapdevteam/cryptoswap',
       },
       {
         label: 'Docs',
-        href: 'https://gameswapfinance.gitbook.io/gameswap/',
+        href: 'https://github.com/cswapdevteam/cryptoswap',
       },
       {
         label: 'Medium',
-        href: 'https://medium.com/@gameswapfinance',
+        href: 'https://medium.com/@cswapfinance',
       }
     ],
   },

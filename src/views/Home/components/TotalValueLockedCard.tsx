@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card, CardBody, Heading, Skeleton, Text } from '@gameswapfinance/uikit'
+// eslint-disable-next-line import/no-unresolved
 import useI18n from 'hooks/useI18n'
-import { useGetStats } from 'hooks/api'
 import { useTotalValue } from '../../../state/hooks'
 import CardValue from './CardValue'
 
@@ -22,7 +22,7 @@ const TotalValueLockedCard = () => {
     <StyledTotalValueLockedCard>
       <CardBody>
         <Heading size="lg" mb="24px">
-          {TranslateString(999, 'Total Value Locked (TVL)')}
+          {TranslateString(999, 'Total Market Cap')}
         </Heading>
         <>
           {/* <Heading size="xl">{`$${tvl}`}</Heading> */}
