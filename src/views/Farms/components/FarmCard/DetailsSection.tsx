@@ -1,7 +1,7 @@
 import React from 'react'
 import useI18n from 'hooks/useI18n'
 import styled from 'styled-components'
-import { Text, Flex, Link, LinkExternal } from '@gameswapfinance/uikit'
+import { Text, Flex, Link, LinkExternal } from '@shofol/gameswapuikit'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { Address } from 'config/constants/types'
 import BigNumber from 'bignumber.js'
@@ -75,7 +75,7 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
       {!removed && (
         <Flex justifyContent="space-between">
           <Text>Total Liquidity (BTC):</Text>
-         <Text>{totalBTCValueFormatted}</Text>
+          <Text>{totalBTCValueFormatted}</Text>
         </Flex>
       )}
 

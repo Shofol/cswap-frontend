@@ -1562,17 +1562,6 @@
     "@ethersproject/properties" "^5.0.3"
     "@ethersproject/strings" "^5.0.4"
 
-"@gameswapfinance/uikit@^0.10.10":
-  version "0.10.10"
-  resolved "https://registry.yarnpkg.com/@gameswapfinance/uikit/-/uikit-0.10.10.tgz#435282fceb91bee2b01b56cd7c277a1f15df8bf4"
-  integrity sha512-luL3ksCFNIujoPKRVNH8BR3vDlAkSPgK50w9/R0P6nfmcOWKmuoZYZ5Q3BoEbsk+W9nP84qK0TvWnam9pdfycg==
-  dependencies:
-    "@types/lodash" "^4.14.162"
-    "@types/styled-system" "^5.1.10"
-    lodash "^4.17.20"
-    react-transition-group "^4.4.1"
-    styled-system "^5.1.5"
-
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1936,6 +1925,17 @@
     "@types/estree" "0.0.39"
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
+
+"@shofol/gameswapuikit@^0.10.9":
+  version "0.10.9"
+  resolved "https://registry.yarnpkg.com/@shofol/gameswapuikit/-/gameswapuikit-0.10.9.tgz#a00c484bf3295466e4ffe8cec42d2df2fa219f14"
+  integrity sha512-G9MG82I0W3Zw0ldof1TnHOpVEt2iLwOzuccGVCF7PNe6aZBrkLHLRxy9Gh/NUcopDIipH9wEgs8gd1Ibw1AbeQ==
+  dependencies:
+    "@types/lodash" "^4.14.162"
+    "@types/styled-system" "^5.1.10"
+    lodash "^4.17.20"
+    react-transition-group "^4.4.1"
+    styled-system "^5.1.5"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -2479,10 +2479,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.0.tgz#7036640b4e21cc2f259ae826ce843d277dad8cff"
   integrity sha512-RJJrrySY7A8havqpGObOB4W92QXKJo63/jFLLgpvOtsGUqbQZ9Sbgl35KMm1DjC6j7AvmmU2bIno+3IyEaemaw==
 
-"@types/styled-components@^5.1.7":
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.7.tgz#3cd10b088c1cb1acde2e4b166b3e8275a3083710"
-  integrity sha512-BJzPhFygYspyefAGFZTZ/8lCEY4Tk+Iqktvnko3xmJf9LrLqs3+grxPeU3O0zLl6yjbYBopD0/VikbHgXDbJtA==
+"@types/styled-components@^5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.11.tgz#a3a1bc0f2cdad7318d8ce219ee507e6b353503b5"
+  integrity sha512-u8g3bSw9KUiZY+S++gh+LlURGraqBe3MC5I5dygrNjGDHWWQfsmZZRTJ9K9oHU2CqWtxChWmJkDI/gp+TZPQMw==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@gameswapfinance/uikit'
+import { Text } from '@shofol/gameswapuikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from 'hooks/useTickets'
 

@@ -11,7 +11,7 @@ import {
   Text,
   CardFooter,
   useModal,
-} from '@gameswapfinance/uikit'
+} from '@shofol/gameswapuikit'
 import useI18n from 'hooks/useI18n'
 import { Nft } from 'config/constants/types'
 import InfoRow from '../InfoRow'

@@ -31,12 +31,11 @@
     "@binance-chain/bsc-use-wallet": "^0.8.1",
     "@crowdin/crowdin-api-client": "^1.10.1",
     "@ethersproject/abi": "^5.0.7",
-    "@gameswapfinance/uikit": "^0.10.10",
     "@reduxjs/toolkit": "^1.5.0",
+    "@shofol/gameswapuikit": "^0.10.9",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.7",
     "bignumber.js": "^9.0.0",
     "chart.js": "^2.9.4",
     "iframe-resizer-react": "^1.1.0",
@@ -50,7 +49,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-twitter-widgets": "^1.9.5",
-    "styled-components": "^5.1.1",
     "typescript": "^4.1.3",
     "universal-cookie": "^4.0.4",
     "web3": "^1.3.1"
@@ -60,9 +58,15 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@pancakeswap-libs/eslint-config-pancake": "1.0.0",
     "@types/jest": "^26.0.19",
+    "@types/styled-components": "^5.1.11",
     "eslint": "^7.16.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
-    "source-map-explorer": "^2.5.1"
+    "source-map-explorer": "^2.5.1",
+    "styled-components": "^5.1.1"
+  },
+  "peerDependencies": {
+    "@types/styled-components": "^5.1.11",
+    "styled-components": "^5.1.1"
   }
 }

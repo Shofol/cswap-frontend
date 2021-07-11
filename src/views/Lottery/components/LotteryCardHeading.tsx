@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading, Text } from '@gameswapfinance/uikit'
+import { Flex, Heading, Text } from '@shofol/gameswapuikit'
 
 interface HeadingProps {
   valueToDisplay?: string

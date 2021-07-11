@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, Heading, Skeleton, Text } from '@gameswapfinance/uikit'
+import { Card, CardBody, Heading, Skeleton, Text } from '@shofol/gameswapuikit'
 // eslint-disable-next-line import/no-unresolved
 import useI18n from 'hooks/useI18n'
 import { useTotalValue } from '../../../state/hooks'

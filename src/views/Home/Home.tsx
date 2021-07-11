@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@gameswapfinance/uikit'
+import { Heading, Text, BaseLayout } from '@shofol/gameswapuikit'
 import useI18n from 'hooks/useI18n'
 // eslint-disable-next-line import/no-unresolved
 import Page from 'components/layout/Page'
@@ -54,7 +54,8 @@ const Home: React.FC = () => {
   return (
     <Page>
       <Hero>
-        <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} />
+        <Text fontSize="80px">Polygon Swap</Text>
+        {/* <img src="/images/Title Bar.png" alt="cake logo" width={950} height={225} /> */}
       </Hero>
       <div>
         <Cards>

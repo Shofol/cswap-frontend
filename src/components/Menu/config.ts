@@ -1,4 +1,4 @@
-import { MenuEntry } from '@gameswapfinance/uikit'
+import { MenuEntry } from '@shofol/gameswapuikit'
 
 const config: MenuEntry[] = [
   {
