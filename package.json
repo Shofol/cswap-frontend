@@ -36,7 +36,6 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.5",
-    "@types/styled-components": "^5.1.7",
     "bignumber.js": "^9.0.0",
     "chart.js": "^2.9.4",
     "iframe-resizer-react": "^1.1.0",
@@ -50,7 +49,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-twitter-widgets": "^1.9.5",
-    "styled-components": "^5.1.1",
     "typescript": "^4.1.3",
     "universal-cookie": "^4.0.4",
     "web3": "^1.3.1"
@@ -63,6 +61,12 @@
     "eslint": "^7.16.0",
     "husky": "^4.3.0",
     "prettier": "^2.1.2",
-    "source-map-explorer": "^2.5.1"
+    "source-map-explorer": "^2.5.1",
+    "@types/styled-components": "^5.1.11",
+    "styled-components": "^5.1.1"
+  },
+  "peerDependencies": {
+    "@types/styled-components": "^5.1.11",
+    "styled-components": "^5.1.1"
   }
 }
