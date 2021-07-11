@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Button } from '@gameswapfinance/uikit'
+import { Heading, Card, CardBody, Button } from '@shofol/gameswapuikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import BigNumber from 'bignumber.js'
 // eslint-disable-next-line import/no-unresolved

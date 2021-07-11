@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Button } from '@gameswapfinance/uikit'
+import { Image, Button } from '@shofol/gameswapuikit'
 import { CommunityTag } from 'components/Tags'
 import useI18n from 'hooks/useI18n'
 import Card from './Card'
@@ -42,11 +42,11 @@ const Coming: React.FC = () => {
         <br />
         <Label>Distributes fee income back to CSWAP holders</Label>
         <Button variant="secondary" fullWidth mb="16px">
-          <span style={{fontSize: 'x-large'}}>$10,000</span> of Matic Dividends
+          <span style={{ fontSize: 'x-large' }}>$10,000</span> of Matic Dividends
         </Button>
       </div>
       <Footer>
-      <div style={{ flex: 1 }}> Let us know what <b>DIVIDEND</b> you would like to see next!</div>
+        <div style={{ flex: 1 }}> Let us know what <b>DIVIDEND</b> you would like to see next!</div>
       </Footer>
     </Card>
   )

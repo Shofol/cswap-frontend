@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Card, CardBody, Text } from '@gameswapfinance/uikit'
+import { Card, CardBody, Text } from '@shofol/gameswapuikit'
 import useI18n from 'hooks/useI18n'
 import { NftProviderContext } from '../contexts/NftProvider'
 import InfoRow from './InfoRow'

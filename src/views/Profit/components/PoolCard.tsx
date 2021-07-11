@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 import React, { useCallback, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { Button, IconButton, useModal, AddIcon, Image, Flex, Text } from '@gameswapfinance/uikit'
+import { Button, IconButton, useModal, AddIcon, Image, Flex, Text } from '@shofol/gameswapuikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
@@ -190,11 +190,11 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         )}
         <Label isFinished={isFinished && sousId !== 0} text={`${tokenName} Earned`} />
         <Flex justifyContent="space-between">
-        <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
-        <Text bold style={{ fontSize: '24px' }}>
-          {pool.depositFee}%
-        </Text>
-      </Flex>
+          <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
+          <Text bold style={{ fontSize: '24px' }}>
+            {pool.depositFee}%
+          </Text>
+        </Flex>
         <StyledCardActions>
           {!account && <UnlockButton />}
           {account &&
@@ -211,10 +211,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                   onClick={
                     isOldSyrup
                       ? async () => {
-                          setPendingTx(true)
-                          await onUnstake('0')
-                          setPendingTx(false)
-                        }
+                        setPendingTx(true)
+                        await onUnstake('0')
+                        setPendingTx(false)
+                      }
                       : onPresentWithdraw
                   }
                 >
@@ -240,14 +240,14 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
         <StyledDetails>
           <div style={{ flex: 1 }}>
             <span role="img" aria-label={stakingTokenName}>
-            <div style={{ flex: 1 }}>
-              {TranslateString(384, 'Your Stake')}:
-              <Image src={`/images/tokens/${stakingTokenName}.png`} width={20} height={20} alt="CSWAP" />{' '}
-              
-            </div>
-            
+              <div style={{ flex: 1 }}>
+                {TranslateString(384, 'Your Stake')}:
+                <Image src={`/images/tokens/${stakingTokenName}.png`} width={20} height={20} alt="CSWAP" />{' '}
+
+              </div>
+
             </span>
-            
+
           </div>
           <Balance fontSize="14px" isDisabled={isFinished} value={getBalanceNumber(stakedBalance)} />
         </StyledDetails>

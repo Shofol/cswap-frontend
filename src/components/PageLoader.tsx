@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Spinner } from '@gameswapfinance/uikit'
+import { Spinner } from '@shofol/gameswapuikit'
 import Page from './layout/Page'
 
 const Wrapper = styled(Page)`

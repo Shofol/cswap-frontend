@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Heading, Text } from '@gameswapfinance/uikit'
+import { Card, CardBody, Heading, Text } from '@shofol/gameswapuikit'
 import useI18n from 'hooks/useI18n'
 import CardContent from './CardContent'
 
